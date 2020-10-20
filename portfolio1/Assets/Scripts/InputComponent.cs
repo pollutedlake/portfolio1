@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputComponent : MonoBehaviour
 {
-    public Vector3 input;
+    public Vector2 input;
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
 
@@ -12,6 +12,6 @@ public class InputComponent : MonoBehaviour
     void Update()
     {
         input.x = Input.GetAxis(horizontalAxis);
-        input.z = Input.GetAxis(verticalAxis);
+        input.y = Input.GetAxis(verticalAxis);
     }
 }
