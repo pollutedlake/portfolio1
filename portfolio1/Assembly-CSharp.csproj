@@ -67,6 +67,7 @@
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\InputComponent.cs" />
+    <Compile Include="Assets\Scripts\Weapon.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>

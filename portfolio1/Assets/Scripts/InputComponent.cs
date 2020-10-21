@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InputComponent : MonoBehaviour
 {
-    public Vector2 input;
+    public Vector2 input;       // 입력받을 character가 움직일 방향
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
 
