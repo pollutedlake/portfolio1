@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float speed = 5.0f;
+    public float runSpeed = 5.0f;
+    public float speed = 3.0f;
+    public float walkSpeed = 3.0f;
 
     /// <summary>
     /// character 이동함수
@@ -15,7 +17,7 @@ public class CharacterMovement : MonoBehaviour
     {
         Vector3 velocity = direction * speed * Time.deltaTime;
 
-        if (direction.sqrMagnitude > 0)
+        if (direction.sqrMagnitude > 0.0f)
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = lookRotation;
@@ -23,5 +25,43 @@ public class CharacterMovement : MonoBehaviour
 
         transform.position += velocity;
         return velocity;
+    }
+
+    public bool Walk(Vector3 velocity)
+    {
+        if (velocity.sqrMagnitude > 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool Turn180(Vector3 direction, Vector3 forward)
+    {
+        if(Vector3.Dot(direction, forward) < 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public bool Run()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speed = runSpeed;
+            return true;
+        }
+        else
+        {
+            speed = walkSpeed;
+            return false;
+        }
     }
 }

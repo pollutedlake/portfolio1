@@ -12,6 +12,8 @@ public class Character : MonoBehaviour
     public float walkSpeed = 3.0f;
     public float runSpeed = 5.0f;
 
+    Vector3 velocity = new Vector3();
+
     // Start is called before the first frame update
     void Start()
     {
@@ -38,30 +40,32 @@ public class Character : MonoBehaviour
         Vector3 forward = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;      // 카메라기준으로 forword벡터 생성
         Vector3 right = new Vector3(Camera.main.transform.right.x, 0, Camera.main.transform.right.z).normalized;        // 카메라기준으로 right벡터 생성
         Vector3 direction = (forward * input.y + right * input.x).normalized;       // 카메라 기준으로 입력받은 방향 계산
-        Vector3 velocity = characterMovement.Move(direction.normalized);        // Character이동
-        if (velocity.sqrMagnitude > 0)
+        if (characterMovement.Turn180(direction, transform.forward))
         {
-            animator.SetBool("Walk", true);
-            
+            animator.SetTrigger("Turn 180");
         }
         else
         {
-            animator.SetBool("Walk", false);
+            if (characterMovement.Walk(velocity))
+            {
+                animator.SetBool("Walk", true);
+            }
+            else
+            {
+                animator.SetBool("Walk", false);
+            }
+            if (characterMovement.Run())
+            {
+                characterMovement.speed = runSpeed;
+                animator.SetBool("Run", true);
+            }
+            else
+            {
+                characterMovement.speed = walkSpeed;
+                animator.SetBool("Run", false);
+            }
         }
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            characterMovement.speed = runSpeed;
-            animator.SetBool("Run", true);
-            animator.SetBool("Draw Long Sword", false);
-        }
-        else{
-            characterMovement.speed = walkSpeed;
-            animator.SetBool("Run", false);
-        }
-        if (Input.GetMouseButton(0))
-        {
-            animator.SetBool("Draw Long Sword", true);
-        }
+        velocity = characterMovement.Move(direction.normalized);        // Character이동
     }
 
     public void DrawWeapon()
