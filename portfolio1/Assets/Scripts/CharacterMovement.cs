@@ -13,7 +13,7 @@ public class CharacterMovement : MonoBehaviour
     /// </summary>
     /// <param name="direction"> character가 이동할 방향</param>
     /// <returns></returns>
-    public Vector3 Move(Vector3 direction)
+    public Vector3 Move(Vector3 direction, bool turn, int attackCount)
     {
         Vector3 velocity = direction * speed * Time.deltaTime;
 
@@ -23,7 +23,10 @@ public class CharacterMovement : MonoBehaviour
             transform.rotation = lookRotation;
         }
 
-        transform.position += velocity;
+        if (!turn && attackCount == 0)
+        {
+            transform.position += velocity;
+        }
         return velocity;
     }
 

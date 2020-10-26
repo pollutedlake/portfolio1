@@ -14,6 +14,9 @@ public class Character : MonoBehaviour
 
     Vector3 velocity = new Vector3();
 
+    private int attackCount = 0;
+    private float attackRate = 0.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +45,7 @@ public class Character : MonoBehaviour
         Vector3 direction = (forward * input.y + right * input.x).normalized;       // 카메라 기준으로 입력받은 방향 계산
         if (characterMovement.Turn180(direction, transform.forward))
         {
-            animator.SetTrigger("Turn 180");
+            animator.SetBool("Turn 180", true);
         }
         else
         {
@@ -65,7 +68,28 @@ public class Character : MonoBehaviour
                 animator.SetBool("Run", false);
             }
         }
-        velocity = characterMovement.Move(direction.normalized);        // Character이동
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (animator.GetBool("Walk"))
+            {
+                attackCount++;
+                animator.SetInteger("AttackCount", attackCount);
+            }
+            else if (animator.GetBool("Draw Long Sword") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Long Sword Slash"))
+            {
+                attackCount++;
+                animator.SetInteger("AttackCount", attackCount);
+            }
+            else
+            {
+                animator.SetBool("Draw Long Sword", true);
+            }
+        }
+        if(animator.GetBool("Draw Long Sword") && Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            animator.SetBool("Draw Long Sword", false);
+        }
+        velocity = characterMovement.Move(direction.normalized, animator.GetBool("Turn 180"), attackCount);        // Character이동
     }
 
     public void DrawWeapon()
@@ -78,5 +102,10 @@ public class Character : MonoBehaviour
     {
         weapon.SheathWeapon();
         characterMovement.speed = walkSpeed;
+    }
+
+    public void TurnEnd()
+    {
+        animator.SetBool("Turn 180", false);
     }
 }
