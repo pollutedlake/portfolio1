@@ -11,17 +11,29 @@ public class AttackWaiting : StateMachineBehaviour
     {
         attackRate = 0.0f;
         attackCount = animator.GetInteger("AttackCount");
+        animator.SetInteger("AttackCount", -1);
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         attackRate += Time.deltaTime;
-        if (attackRate < 0.5f)
+        if (attackRate < 1.0f)
         {
             if (Input.GetMouseButtonDown(0))
             {
-                animator.SetInteger("AttackCount", ++attackCount);
+                switch (++attackCount % 3)
+                {
+                    case 0:
+                        animator.SetInteger("AttackCount", 3);
+                        break;
+                    case 1:
+                        animator.SetInteger("AttackCount", 4);
+                        break;
+                    case 2:
+                        animator.SetInteger("AttackCount", 2);
+                        break;
+                }
             }
         }
         else

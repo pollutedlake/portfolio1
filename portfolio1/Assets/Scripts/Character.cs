@@ -39,6 +39,7 @@ public class Character : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        attackCount = animator.GetInteger("AttackCount");
         Vector2 input = inputComponent.input;
         Vector3 forward = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;      // 카메라기준으로 forword벡터 생성
         Vector3 right = new Vector3(Camera.main.transform.right.x, 0, Camera.main.transform.right.z).normalized;        // 카메라기준으로 right벡터 생성
@@ -73,9 +74,11 @@ public class Character : MonoBehaviour
             if (animator.GetBool("Walk"))
             {
                 attackCount++;
+                animator.SetBool("Draw Long Sword", true);
+                DrawWeapon();
                 animator.SetInteger("AttackCount", attackCount);
             }
-            else if (animator.GetBool("Draw Long Sword") && !animator.GetCurrentAnimatorStateInfo(0).IsName("Long Sword Slash"))
+            else if (animator.GetBool("Draw Long Sword") && !animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
             {
                 attackCount++;
                 animator.SetInteger("AttackCount", attackCount);
