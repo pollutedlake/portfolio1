@@ -13,6 +13,7 @@ public class Character : MonoBehaviour
     public float runSpeed = 5.0f;
 
     Vector3 velocity = new Vector3();
+    public Vector3 direction = new Vector3();
 
     private int attackCount = 0;
     private float attackRate = 0.0f;
@@ -43,7 +44,11 @@ public class Character : MonoBehaviour
         Vector2 input = inputComponent.input;
         Vector3 forward = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;      // 카메라기준으로 forword벡터 생성
         Vector3 right = new Vector3(Camera.main.transform.right.x, 0, Camera.main.transform.right.z).normalized;        // 카메라기준으로 right벡터 생성
-        Vector3 direction = (forward * input.y + right * input.x).normalized;       // 카메라 기준으로 입력받은 방향 계산
+        direction = (forward * input.y + right * input.x).normalized;       // 카메라 기준으로 입력받은 방향 계산
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("Roll", true);
+        }
         if (characterMovement.Turn180(direction, transform.forward))
         {
             animator.SetBool("Turn 180", true);
@@ -88,11 +93,14 @@ public class Character : MonoBehaviour
                 animator.SetBool("Draw Long Sword", true);
             }
         }
-        if(animator.GetBool("Draw Long Sword") && Input.GetKeyDown(KeyCode.LeftShift))
+        if (animator.GetBool("Draw Long Sword") && Input.GetKeyDown(KeyCode.LeftShift))
         {
             animator.SetBool("Draw Long Sword", false);
         }
-        velocity = characterMovement.Move(direction.normalized, animator.GetBool("Turn 180"), attackCount);        // Character이동
+        if (!animator.GetBool("Roll"))
+        {
+            velocity = characterMovement.Move(direction.normalized, animator.GetBool("Turn 180"), attackCount);        // Character이동
+        }
     }
 
     public void DrawWeapon()
