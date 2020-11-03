@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\InputComponent.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
+    <Compile Include="Assets\Scripts\PlayerAttack.cs" />
     <Compile Include="Assets\Scripts\PlayerRoll.cs" />
     <Compile Include="Assets\Scripts\Rhino.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />

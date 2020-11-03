@@ -28,6 +28,15 @@ public class Monster : MonoBehaviour
         
     }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Weapon"))
+        {
+            Damaged(10);
+            Debug.Log("test");
+        }
+    }
+
     public void Damaged(float damage)
     {
         curHp -= damage;
