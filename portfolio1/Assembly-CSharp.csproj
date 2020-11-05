@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\AttackWaiting.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
+    <Compile Include="Assets\Scripts\EyeSight.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\InputComponent.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
