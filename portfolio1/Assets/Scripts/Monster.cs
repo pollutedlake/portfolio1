@@ -7,7 +7,6 @@ public class Monster : MonoBehaviour
     public enum State
     {
         Patrol, Battle, Die
-            //, Idle
     }
     public Dictionary<string, State> monStates = new Dictionary<string, State>();
     public State monState;
@@ -17,6 +16,7 @@ public class Monster : MonoBehaviour
     public GameObject[] patrolPoint;
     private int patrolIdx = 0;
     public Animator animator;
+    public Character character;
 
     // Start is called before the first frame update
     public void setUp()
@@ -29,7 +29,6 @@ public class Monster : MonoBehaviour
         monStates.Add("Battle", State.Battle);
         monStates.Add("Die", State.Die);
         monState = monStates["Patrol"];
-        //monStates.Add("Idle", State.Idle);
     }
 
     // Update is called once per frame
@@ -69,7 +68,6 @@ public class Monster : MonoBehaviour
             animator.SetBool("Idle", true);
             if (patrolWaitingT > 2.0f)
             {
-                //monState = monStates["Idle"];
                 patrolWaitingT = 0.0f;
                 patrolIdx++;
                 patrolIdx %= patrolPoint.Length;
@@ -82,6 +80,15 @@ public class Monster : MonoBehaviour
             transform.rotation = lookRotation;
             transform.position += direction.normalized * Time.deltaTime * patrolSpeed;
         }
+    }
+
+    public void Shout()
+    {
+        monState = monStates["Battle"];
+        animator.SetInteger("State", (int)monState);
+        // 플레이어에게 포효알리기
+        // 플레이어가 회피가능
+        // 회피하지 못하면 움직이지 못함
     }
 
     public void Die()
