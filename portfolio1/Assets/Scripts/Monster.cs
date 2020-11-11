@@ -17,6 +17,7 @@ public class Monster : MonoBehaviour
     private int patrolIdx = 0;
     public Animator animator;
     public Character character;
+    public CapsuleCollider capsuleCollider;
 
     // Start is called before the first frame update
     public void setUp()
@@ -24,6 +25,10 @@ public class Monster : MonoBehaviour
         if (animator == null)
         {
             animator = transform.GetComponent<Animator>();
+        }
+        if(capsuleCollider == null)
+        {
+            capsuleCollider = GetComponent<CapsuleCollider>();
         }
         monStates.Add("Patrol", State.Patrol);
         monStates.Add("Battle", State.Battle);

@@ -8,6 +8,7 @@ public class Character : MonoBehaviour
     private InputComponent inputComponent;
     private CharacterMovement characterMovement;
     public Weapon weapon;
+    private Rigidbody rigidbody;
 
     public float walkSpeed = 3.0f;
     public float runSpeed = 5.0f;
@@ -17,6 +18,9 @@ public class Character : MonoBehaviour
 
     private int attackCount = 0;
     private float attackRate = 0.0f;
+
+    private float maxHp;
+    private float curHp;
 
     // Start is called before the first frame update
     void Start()
@@ -35,6 +39,12 @@ public class Character : MonoBehaviour
 
             characterMovement = GetComponent<CharacterMovement>();
         }
+        if(rigidbody == null)
+        {
+            rigidbody = GetComponent<Rigidbody>();
+        }
+        maxHp = 100;
+        curHp = maxHp;
     }
 
     // Update is called once per frame
@@ -118,5 +128,21 @@ public class Character : MonoBehaviour
     public void TurnEnd()
     {
         animator.SetBool("Turn 180", false);
+    }
+
+    public void TakeDamage(float damage, Vector3 damagedVec)
+    {
+        animator.SetTrigger("Damaged");
+        Debug.Log(damage + " 데미지 받음");
+        if (curHp > 0)
+        {
+            curHp -= damage;
+            transform.forward = -damagedVec.normalized;
+            rigidbody.AddForce(-transform.forward * 5.0f, ForceMode.Impulse);
+        }
+        if (!(curHp > 0))
+        {
+            // 죽는 모션
+        }
     }
 }
