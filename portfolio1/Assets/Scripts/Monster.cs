@@ -28,7 +28,6 @@ public class Monster : MonoBehaviour
         monStates.Add("Patrol", State.Patrol);
         monStates.Add("Battle", State.Battle);
         monStates.Add("Die", State.Die);
-        monState = monStates["Patrol"];
     }
 
     // Update is called once per frame
@@ -65,13 +64,13 @@ public class Monster : MonoBehaviour
         if (direction.sqrMagnitude < 0.1f)
         {
             patrolWaitingT += Time.deltaTime;
-            animator.SetBool("Idle", true);
+            animator.SetBool("Walk", false);
             if (patrolWaitingT > 2.0f)
             {
                 patrolWaitingT = 0.0f;
                 patrolIdx++;
                 patrolIdx %= patrolPoint.Length;
-                animator.SetBool("Idle", false);
+                animator.SetBool("Walk", true);
             }
         }
         else
@@ -85,6 +84,7 @@ public class Monster : MonoBehaviour
     public void Shout()
     {
         monState = monStates["Battle"];
+        animator.SetBool("Walk", false);
         animator.SetInteger("State", (int)monState);
         // 플레이어에게 포효알리기
         // 플레이어가 회피가능
