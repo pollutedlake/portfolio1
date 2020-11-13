@@ -7,13 +7,23 @@ public class CharacterMovement : MonoBehaviour
     public float runSpeed = 5.0f;
     public float speed = 3.0f;
     public float walkSpeed = 3.0f;
+    private Animator animator;
+
+    private void Start()
+    {
+        if (animator == null)
+        {
+            animator = GetComponent<Animator>();
+        }
+    }
 
     /// <summary>
     /// character 이동함수
     /// </summary>
     /// <param name="direction"> character가 이동할 방향</param>
     /// <returns></returns>
-    public Vector3 Move(Vector3 direction, bool turn, int attackCount)
+    //public Vector3 Move(Vector3 direction, bool turn, int attackCount)
+    public Vector3 Move(Vector3 direction)
     {
         Vector3 velocity = direction * speed * Time.deltaTime;
 
@@ -23,10 +33,12 @@ public class CharacterMovement : MonoBehaviour
             transform.rotation = lookRotation;
         }
 
-        if (!turn && attackCount == 0)
-        {
-            transform.position += velocity;
-        }
+        //if (!turn && attackCount == 0)
+        //{
+        //    transform.position += velocity;
+        //}
+        transform.position += velocity;
+        animator.SetFloat("Velocity", velocity.magnitude);
         return velocity;
     }
 
@@ -54,17 +66,17 @@ public class CharacterMovement : MonoBehaviour
         }
     }
 
-    public bool Run()
+    public void Run(bool isRun)
     {
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (isRun)
         {
             speed = runSpeed;
-            return true;
+            animator.SetBool("Run", true);
         }
         else
         {
             speed = walkSpeed;
-            return false;
+            animator.SetBool("Run", false);
         }
     }
 }
