@@ -28,7 +28,7 @@ public class Character : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(animator== null)
+        if (animator == null)
         {
             animator = GetComponent<Animator>();
         }
@@ -42,7 +42,7 @@ public class Character : MonoBehaviour
 
             characterMovement = GetComponent<CharacterMovement>();
         }
-        if(rigidbody == null)
+        if (rigidbody == null)
         {
             rigidbody = GetComponent<Rigidbody>();
         }
@@ -58,8 +58,33 @@ public class Character : MonoBehaviour
         Vector3 forward = new Vector3(Camera.main.transform.forward.x, 0, Camera.main.transform.forward.z).normalized;      // 카메라기준으로 forword벡터 생성
         Vector3 right = new Vector3(Camera.main.transform.right.x, 0, Camera.main.transform.right.z).normalized;        // 카메라기준으로 right벡터 생성
         direction = (forward * input.y + right * input.x).normalized;       // 카메라 기준으로 입력받은 방향 계산
-        velocity = characterMovement.Move(direction);
+        velocity = characterMovement.Move(direction, transform.forward);
         characterMovement.Run(inputComponent.isRun);
+        if (inputComponent.mouseLBtn)
+        {
+            inputComponent.mouseLBtn = false;
+            if (animator.GetBool("Draw Long Sword"))
+            {
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+                {
+                    attackCount++;
+                    animator.SetInteger("AttackCount", attackCount);
+                }
+            }
+            else
+            {
+                if(direction.sqrMagnitude > 0)
+                {
+                    
+                }
+                else
+                {
+                    animator.SetBool("Draw Long Sword", true);
+                    characterMovement.speed = characterMovement.weaponSpeed;
+                }
+            }
+        }
+        //characterMovement.Turn180(direction, transform.forward);
         //if (Input.GetKeyDown(KeyCode.Space))
         //{
         //    animator.SetBool("Roll", true);
@@ -142,6 +167,9 @@ public class Character : MonoBehaviour
 
     public void TurnEnd()
     {
+        Quaternion lookRotation = Quaternion.LookRotation(-transform.forward);
+        transform.rotation = lookRotation;
+        characterMovement.turn180 = false;
         animator.SetBool("Turn 180", false);
     }
 

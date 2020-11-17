@@ -7,6 +7,7 @@ public class FollowingCamera : MonoBehaviour
     public Character target;
     public Vector3 distanceFromTarget = new Vector3(0.0f, 2.0f, -5.0f);
     public Vector3 lookOffset;
+    public Vector3 newPosition;
     public float verticalAngle;
     public float horizontalAngle;
 
@@ -34,7 +35,7 @@ public class FollowingCamera : MonoBehaviour
         // 회전이 적용된 상대 위치 구하기
         Vector3 localPosition = Quaternion.Euler(verticalAngle, horizontalAngle, 0.0f) * distanceFromTarget;
         // 타겟으로부터의 위치 구하기
-        Vector3 newPosition = target.transform.position + localPosition;
+        newPosition = target.transform.position + localPosition;
         // 보는 지점 구하기
         Vector3 lookPosition = target.transform.position + lookOffset;
         // 위치 및 방향 설정
