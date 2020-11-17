@@ -47,7 +47,7 @@ public class CharacterMovement : MonoBehaviour
             }
         }
         velocity = direction * speed * Time.deltaTime;
-        if (direction.sqrMagnitude > 0.0f && !turn180 && !animator.GetCurrentAnimatorStateInfo(0).IsTag("Not Move"))
+        if (direction.sqrMagnitude > 0.0f && !turn180 && animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
         {
             Quaternion lookRotation = Quaternion.LookRotation(direction);
             transform.rotation = lookRotation;

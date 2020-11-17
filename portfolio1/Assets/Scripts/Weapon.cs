@@ -8,6 +8,9 @@ public class Weapon : MonoBehaviour
     public GameObject spine1;
     public GameObject drawPosition;
     public GameObject sheathPosition;
+    private Animator charAnimator;
+    private CapsuleCollider capsuleCollider;
+
     public void DrawWeapon()
     {
         transform.parent = rightHand.transform;
@@ -25,6 +28,14 @@ public class Weapon : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        if (charAnimator == null)
+        {
+            charAnimator = FindObjectOfType<Character>().GetComponent<Animator>();
+        }
+        if (capsuleCollider == null)
+        {
+            capsuleCollider = GetComponent<CapsuleCollider>();
+        }
         if (drawPosition == null)
         {
             
@@ -40,6 +51,13 @@ public class Weapon : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (charAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        {
+            capsuleCollider.enabled = true;
+        }
+        else
+        {
+            capsuleCollider.enabled = false;
+        }
     }
 }

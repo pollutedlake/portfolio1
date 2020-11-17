@@ -7,6 +7,7 @@ public class PlayerRoll : StateMachineBehaviour
     private Character character;
     private InputComponent inputComponent;
     private Vector3 direction;
+    private CapsuleCollider capsuleCollider;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -18,6 +19,10 @@ public class PlayerRoll : StateMachineBehaviour
         if (inputComponent == null)
         {
             inputComponent = character.GetComponent<InputComponent>();
+        }
+        if(capsuleCollider == null)
+        {
+            capsuleCollider = character.GetComponent<CapsuleCollider>();
         }
         direction = character.direction;
         if(!(direction.sqrMagnitude > 0.0f))
@@ -31,12 +36,13 @@ public class PlayerRoll : StateMachineBehaviour
     {
         Vector3 velocity = direction * 3.0f * Time.deltaTime;
         character.transform.position += velocity;
+        capsuleCollider.enabled = false;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        animator.SetBool("Roll", false);
+        capsuleCollider.enabled = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()

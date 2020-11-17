@@ -48,7 +48,7 @@ public class AttackWaiting : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        if(animator.GetNextAnimatorStateInfo(0).IsName("Long Sword Idle"))
+        if(!animator.GetNextAnimatorStateInfo(0).IsTag("Attack"))
         {
             animator.SetInteger("AttackCount", 0);
         }
