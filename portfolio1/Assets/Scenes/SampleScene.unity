@@ -598,7 +598,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 47
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -644,7 +644,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1405890609}
   distanceFromTarget: {x: 0, y: 2, z: -5}
-  lookOffset: {x: 0, y: 0, z: 0}
+  notAimingDist: {x: 0, y: 2, z: -5}
+  aimingDist: {x: 0.5, y: 1.5, z: -4.5}
+  lookOffset: {x: 0, y: 1.5, z: 0}
   newPosition: {x: 0, y: 0, z: 0}
   verticalAngle: 0
   horizontalAngle: 0
@@ -805,6 +807,8 @@ MonoBehaviour:
   horizontalAxis: Horizontal
   verticalAxis: Vertical
   isRun: 0
+  isRoll: 0
+  mouseLBtn: 0
 --- !u!114 &1405890608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -820,6 +824,8 @@ MonoBehaviour:
   runSpeed: 5
   speed: 3
   walkSpeed: 3
+  weaponSpeed: 3
+  turn180: 0
 --- !u!114 &1405890609
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -833,8 +839,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 335968010}
-  walkSpeed: 5
-  runSpeed: 10
   direction: {x: 0, y: 0, z: 0}
 --- !u!136 &1405890612
 CapsuleCollider:
