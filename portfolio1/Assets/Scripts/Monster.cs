@@ -18,10 +18,16 @@ public class Monster : MonoBehaviour
     public Animator animator;
     public Character character;
     public CapsuleCollider capsuleCollider;
+    public UIMgr uiMgr;
+    public AudioSource roarSound;
 
     // Start is called before the first frame update
     public void setUp()
     {
+        if (uiMgr == null)
+        {
+            uiMgr = FindObjectOfType<UIMgr>();
+        }
         if (animator == null)
         {
             animator = transform.GetComponent<Animator>();
@@ -29,6 +35,14 @@ public class Monster : MonoBehaviour
         if(capsuleCollider == null)
         {
             capsuleCollider = GetComponent<CapsuleCollider>();
+        }
+        if (character == null)
+        {
+            character = FindObjectOfType<Character>();
+        }
+        if(roarSound == null)
+        {
+            roarSound = GetComponent<AudioSource>();
         }
         monStates.Add("Patrol", State.Patrol);
         monStates.Add("Battle", State.Battle);
@@ -39,15 +53,6 @@ public class Monster : MonoBehaviour
     void Update()
     {
         
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.gameObject.CompareTag("Weapon"))
-        {
-            Damaged(10);
-            Debug.Log("test");
-        }
     }
 
     public void Damaged(float damage)
@@ -101,5 +106,10 @@ public class Monster : MonoBehaviour
         curHp = 0;
         animator.SetTrigger("Die");
         monState = monStates["Die"];
+    }
+
+    public void Roar()
+    {
+        roarSound.Play();
     }
 }

@@ -9,6 +9,9 @@ public class Character : MonoBehaviour
     private CharacterMovement characterMovement;
     public Weapon weapon;
     private Rigidbody rigidbody;
+    public GameObject leftHand;
+    private Projectile slinger;
+    private int slingerN;
 
     Vector3 velocity = new Vector3();
     public Vector3 direction = new Vector3();
@@ -107,6 +110,21 @@ public class Character : MonoBehaviour
                 fallDownEnd = false;
             }
         }
+        if (Input.GetKey(KeyCode.C))
+        {
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                if (slinger != null)
+                {
+                    slinger.Shoot();
+                    slingerN--;
+                    if (slingerN < 1)
+                    {
+                        Destroy(slinger);
+                    }
+                }
+            }
+        }
     }
 
     public void DrawWeapon()
@@ -143,6 +161,18 @@ public class Character : MonoBehaviour
             if (!(curHp > 0))
             {
                 // 죽는 모션
+            }
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (other.CompareTag("SlingerObject"))
+        {
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                slinger = other.GetComponent<SlingerObject>().Interact(leftHand);
+                slingerN = 20;
             }
         }
     }

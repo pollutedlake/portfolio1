@@ -20,7 +20,7 @@ public class Rhino : Monster
     {
         setUp();
         monState = monStates["Patrol"];
-        maxHp = 10;
+        maxHp = 50;
         curHp = maxHp;
     }
 
@@ -106,10 +106,30 @@ public class Rhino : Monster
 
     private void OnTriggerEnter(Collider other)
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run"))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && other.gameObject.CompareTag("Player"))
         {
             Vector3 damagedVec = new Vector3(other.ClosestPoint(capsuleCollider.center).x - capsuleCollider.center.x, character.transform.position.y, other.ClosestPoint(capsuleCollider.center).z - capsuleCollider.center.z);
-            character.TakeDamage(20.0f, damagedVec); 
+            character.TakeDamage(20.0f, damagedVec);
+        }
+        if (other.gameObject.CompareTag("Weapon"))
+        {
+            Damaged(10.0f);
+            uiMgr.ShowDamage(other.ClosestPoint(capsuleCollider.center), 10.0f);
+            if (monState == monStates["Patrol"])
+            {
+                Shout();
+            }
+        }
+        if (other.gameObject.CompareTag("Slinger"))
+        {
+            Debug.Log("test");
+            Destroy(other.gameObject);
+            Damaged(2.0f);
+            uiMgr.ShowDamage(other.ClosestPoint(capsuleCollider.center), 2.0f);
+            if (monState == monStates["Patrol"])
+            {
+                Shout();
+            }
         }
     }
 
