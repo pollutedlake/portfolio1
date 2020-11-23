@@ -50,7 +50,7 @@ public class CharacterMovement : MonoBehaviour
         return velocity;
     }
 
-    public void Run(bool isRun, float curStamina)
+    public void Run(bool isRun)
     {
         if (isRun)
         {

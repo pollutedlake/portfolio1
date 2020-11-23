@@ -76,16 +76,36 @@ public class Character : MonoBehaviour
         {
             velocity = characterMovement.Move(direction, transform.forward);
         }
-        characterMovement.Run(inputComponent.isRun, curStamina);
-        if (animator.GetFloat("MoveSpeed") == 1.5f && animator.GetFloat("Velocity") != 0.0f)
+        characterMovement.Run(inputComponent.isRun);
+        if (animator.GetFloat("MoveSpeed") == 1.5f && animator.GetCurrentAnimatorStateInfo(0).IsName("Move"))
         {
             curStamina -= Time.deltaTime * 10.0f;
             if (curStamina < 0.0f)
             {
                 curStamina = 0.0f;
+                if (!animator.GetCurrentAnimatorStateInfo(0).IsName("Exhausted"))
+                {
+                    animator.SetTrigger("Drained");
+                    Exhausted();
+                }
             }
-            staminaBar.rectTransform.localScale = new Vector3((float)curStamina / (float)maxStamina, 1.0f, 1.0f);
         }
+        else
+        {
+            if (curStamina < maxStamina)
+            {
+                curStamina += Time.deltaTime * 15.0f;
+            }
+            else
+            {
+                curStamina = maxStamina;
+            }
+        }
+        staminaBar.rectTransform.localScale = new Vector3((float)curStamina / (float)maxStamina, 1.0f, 1.0f);
+        //if(curStamina == 0.0f)
+        //{
+        //    Exhausted();
+        //}
         if (inputComponent.mouseLBtn)
         {
             inputComponent.mouseLBtn = false;
@@ -119,8 +139,12 @@ public class Character : MonoBehaviour
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
             {
-                inputComponent.isRoll = false;
-                animator.SetTrigger("Roll");
+                if(!(curStamina < 20.0f))
+                {
+                    curStamina -= 20.0f;
+                    inputComponent.isRoll = false;
+                    animator.SetTrigger("Roll");
+                }
             }
         }
         if (fallDownEnd)
@@ -141,6 +165,7 @@ public class Character : MonoBehaviour
                 {
                     if (slinger != null)
                     {
+                        animator.SetTrigger("Shoot");
                         slinger.Shoot();
                         slingerN--;
                         if (slingerN < 1)
@@ -151,6 +176,18 @@ public class Character : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Exhausted()
+    {
+        animator.SetBool("Exhausted", true);
+        StartCoroutine("EndExhausted");
+    }
+
+    private IEnumerator EndExhausted()
+    {
+        yield return new WaitForSeconds(1.0f);
+        animator.SetBool("Exhausted", false);
     }
 
     public void DrawWeapon()
