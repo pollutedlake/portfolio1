@@ -122,7 +122,6 @@ public class Rhino : Monster
         }
         if (other.gameObject.CompareTag("Slinger"))
         {
-            Debug.Log("test");
             Destroy(other.gameObject);
             Damaged(2.0f);
             uiMgr.ShowDamage(other.ClosestPoint(capsuleCollider.center), 2.0f);

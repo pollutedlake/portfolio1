@@ -9,7 +9,6 @@ public class CharacterMovement : MonoBehaviour
     public float walkSpeed = 5.0f;
     public float weaponSpeed = 3.0f;
     private Animator animator;
-    private CapsuleCollider capsuleCollider;
     private Vector3 velocity;
     public bool turn180 = false;
 
@@ -18,10 +17,6 @@ public class CharacterMovement : MonoBehaviour
         if (animator == null)
         {
             animator = GetComponent<Animator>();
-        }
-        if (capsuleCollider == null)
-        {
-            capsuleCollider = GetComponent<CapsuleCollider>();
         }
     }
 
@@ -33,7 +28,7 @@ public class CharacterMovement : MonoBehaviour
     //public Vector3 Move(Vector3 direction, bool turn, int attackCount)
     public Vector3 Move(Vector3 direction, Vector3 forward)
     {
-        if(Vector3.Dot(direction, forward) < 0)
+        if(Vector3.Dot(direction, forward) < -0.05f)
         {
             turn180 = true;
             animator.SetBool("Turn 180", true);
@@ -55,7 +50,7 @@ public class CharacterMovement : MonoBehaviour
         return velocity;
     }
 
-    public void Run(bool isRun)
+    public void Run(bool isRun, float curStamina)
     {
         if (isRun)
         {

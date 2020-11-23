@@ -47,7 +47,7 @@ public class FollowingCamera : MonoBehaviour
         // 타겟으로부터의 각도 구하기
         Quaternion angle = Quaternion.Euler(verticalAngle, horizontalAngle, 0.0f);
 
-        if (Input.GetKey(KeyCode.C))
+        if (Input.GetKey(KeyCode.C) && target.animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
         {
             aimImg.gameObject.SetActive(true);
             float fov = camera.fieldOfView;

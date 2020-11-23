@@ -1,17 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character : MonoBehaviour
 {
-    private Animator animator;
+    public Animator animator;
     private InputComponent inputComponent;
     private CharacterMovement characterMovement;
     public Weapon weapon;
     private Rigidbody rigidbody;
+    public CapsuleCollider capsuleCollider;
     public GameObject leftHand;
     private Projectile slinger;
     private int slingerN;
+    public RawImage hpBar;
+    public RawImage staminaBar;
 
     Vector3 velocity = new Vector3();
     public Vector3 direction = new Vector3();
@@ -21,6 +25,9 @@ public class Character : MonoBehaviour
 
     private float maxHp;
     private float curHp;
+
+    private float maxStamina;
+    private float curStamina;
 
     private float fallDownT = 0.0f;
     private bool fallDownEnd = false;
@@ -46,8 +53,15 @@ public class Character : MonoBehaviour
         {
             rigidbody = GetComponent<Rigidbody>();
         }
-        maxHp = 100;
+        if (capsuleCollider == null)
+        {
+            capsuleCollider = GetComponent<CapsuleCollider>();
+            capsuleCollider.enabled = true;
+        }
+        maxHp = 100.0f;
         curHp = maxHp;
+        maxStamina = 100.0f;
+        curStamina = 100.0f;
     }
 
     // Update is called once per frame
@@ -62,7 +76,16 @@ public class Character : MonoBehaviour
         {
             velocity = characterMovement.Move(direction, transform.forward);
         }
-        characterMovement.Run(inputComponent.isRun);
+        characterMovement.Run(inputComponent.isRun, curStamina);
+        if (animator.GetFloat("MoveSpeed") == 1.5f && animator.GetFloat("Velocity") != 0.0f)
+        {
+            curStamina -= Time.deltaTime * 10.0f;
+            if (curStamina < 0.0f)
+            {
+                curStamina = 0.0f;
+            }
+            staminaBar.rectTransform.localScale = new Vector3((float)curStamina / (float)maxStamina, 1.0f, 1.0f);
+        }
         if (inputComponent.mouseLBtn)
         {
             inputComponent.mouseLBtn = false;
@@ -110,17 +133,20 @@ public class Character : MonoBehaviour
                 fallDownEnd = false;
             }
         }
-        if (Input.GetKey(KeyCode.C))
+        if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKey(KeyCode.C))
             {
-                if (slinger != null)
+                if (Input.GetKeyDown(KeyCode.R))
                 {
-                    slinger.Shoot();
-                    slingerN--;
-                    if (slingerN < 1)
+                    if (slinger != null)
                     {
-                        Destroy(slinger);
+                        slinger.Shoot();
+                        slingerN--;
+                        if (slingerN < 1)
+                        {
+                            Destroy(slinger);
+                        }
                     }
                 }
             }
@@ -162,6 +188,7 @@ public class Character : MonoBehaviour
             {
                 // 죽는 모션
             }
+            hpBar.rectTransform.localScale = new Vector3((float)curHp / (float)maxHp, 1.0f, 1.0f);
         }
     }
 
@@ -175,6 +202,11 @@ public class Character : MonoBehaviour
                 slingerN = 20;
             }
         }
+    }
+
+    public void Ducking()
+    {
+        animator.SetTrigger("Ducking");
     }
 
     public void GetUp()

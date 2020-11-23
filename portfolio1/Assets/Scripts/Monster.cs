@@ -96,9 +96,19 @@ public class Monster : MonoBehaviour
         monState = monStates["Battle"];
         animator.SetBool("Walk", false);
         animator.SetInteger("State", (int)monState);
-        // 플레이어에게 포효알리기
-        // 플레이어가 회피가능
-        // 회피하지 못하면 움직이지 못함
+        StartCoroutine("GetRoared");
+    }
+
+    private IEnumerator GetRoared()
+    {
+        yield return new WaitForSeconds(1.0f);
+        if ((transform.position - character.transform.position).sqrMagnitude < 900.0f)
+        {
+            if (character.capsuleCollider.enabled)
+            {
+                character.Ducking();
+            }
+        }
     }
 
     public void Die()
