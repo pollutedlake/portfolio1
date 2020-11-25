@@ -20,6 +20,8 @@ public class FollowingCamera : MonoBehaviour
     private Vector3 lookPosition;
     public RawImage aimImg;
 
+    private Ray cameraRay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -46,7 +48,7 @@ public class FollowingCamera : MonoBehaviour
         verticalAngle = Mathf.Clamp(verticalAngle, -90.0f, 65.0f);
         // 타겟으로부터의 각도 구하기
         Quaternion angle = Quaternion.Euler(verticalAngle, horizontalAngle, 0.0f);
-
+        cameraRay = new Ray(transform.position, transform.forward);
         if (Input.GetKey(KeyCode.C) && target.animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
         {
             aimImg.gameObject.SetActive(true);
@@ -99,5 +101,11 @@ public class FollowingCamera : MonoBehaviour
     {
         distanceFromTarget = Vector3.Lerp(distanceFromTarget, aimingDist, Time.deltaTime * 10.0f);
         //distanceFromTarget = aimingDist;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(cameraRay);
     }
 }

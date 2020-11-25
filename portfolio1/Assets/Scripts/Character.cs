@@ -17,6 +17,8 @@ public class Character : MonoBehaviour
     public RawImage hpBar;
     public RawImage staminaBar;
 
+    //public bool canHit = true;
+
     Vector3 velocity = new Vector3();
     public Vector3 direction = new Vector3();
 
