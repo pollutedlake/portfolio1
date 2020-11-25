@@ -38,9 +38,7 @@ namespace UnityEngine.Rendering.PostProcessing
         /// </summary>
         ColorBlindnessSimulation,
 
-        /// <summary>
-        /// A menu item separator for the inspector. Do not use.
-        /// </summary>
+        // Menu item separator for the inspector
         _,
 
         /// <summary>

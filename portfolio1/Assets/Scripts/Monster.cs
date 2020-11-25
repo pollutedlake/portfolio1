@@ -104,7 +104,7 @@ public class Monster : MonoBehaviour
         yield return new WaitForSeconds(1.0f);
         if ((transform.position - character.transform.position).sqrMagnitude < 900.0f)
         {
-            if (character.capsuleCollider.enabled)
+            if (character.canHit)
             {
                 character.Ducking();
             }

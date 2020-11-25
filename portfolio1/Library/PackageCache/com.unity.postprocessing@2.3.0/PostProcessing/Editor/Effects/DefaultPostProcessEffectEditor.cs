@@ -13,10 +13,8 @@ namespace UnityEditor.Rendering.PostProcessing
     public class DefaultPostProcessEffectEditor : PostProcessEffectBaseEditor
     {
         List<SerializedParameterOverride> m_Parameters;
-        
-        /// <summary>
-        /// Called when the editor is initialized.
-        /// </summary>
+
+        /// <inheritdoc />
         public override void OnEnable()
         {
             m_Parameters = new List<SerializedParameterOverride>();
@@ -39,10 +37,7 @@ namespace UnityEditor.Rendering.PostProcessing
             }
         }
 
-        /// <summary>
-        /// Called every time the inspector is being redrawn. This is where you should add your UI
-        /// drawing code.
-        /// </summary>
+        /// <inheritdoc />
         public override void OnInspectorGUI()
         {
             foreach (var parameter in m_Parameters)

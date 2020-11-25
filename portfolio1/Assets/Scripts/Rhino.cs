@@ -108,6 +108,10 @@ public class Rhino : Monster
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && other.gameObject.CompareTag("Player"))
         {
+            if (!character.canHit)
+            {
+                return;
+            }
             Vector3 damagedVec = new Vector3(other.ClosestPoint(capsuleCollider.center).x - capsuleCollider.center.x, character.transform.position.y, other.ClosestPoint(capsuleCollider.center).z - capsuleCollider.center.z);
             character.TakeDamage(20.0f, damagedVec);
         }

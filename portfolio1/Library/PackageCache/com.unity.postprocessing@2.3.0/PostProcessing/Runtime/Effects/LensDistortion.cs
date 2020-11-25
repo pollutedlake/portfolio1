@@ -47,11 +47,7 @@ namespace UnityEngine.Rendering.PostProcessing
         [Range(0.01f, 5f), Tooltip("Global screen scaling.")]
         public FloatParameter scale = new FloatParameter { value = 1f };
 
-        /// <summary>
-        /// Returns <c>true</c> if the effect is currently enabled and supported.
-        /// </summary>
-        /// <param name="context">The current post-processing render context</param>
-        /// <returns><c>true</c> if the effect is currently enabled and supported</returns>
+        /// <inheritdoc />
         public override bool IsEnabledAndSupported(PostProcessRenderContext context)
         {
             return enabled.value
@@ -61,7 +57,9 @@ namespace UnityEngine.Rendering.PostProcessing
         }
     }
 
+#if UNITY_2017_1_OR_NEWER
     [UnityEngine.Scripting.Preserve]
+#endif
     internal sealed class LensDistortionRenderer : PostProcessEffectRenderer<LensDistortion>
     {
         public override void Render(PostProcessRenderContext context)

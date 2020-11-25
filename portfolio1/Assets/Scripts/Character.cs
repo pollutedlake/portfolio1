@@ -17,7 +17,7 @@ public class Character : MonoBehaviour
     public RawImage hpBar;
     public RawImage staminaBar;
 
-    //public bool canHit = true;
+    public bool canHit = true;
 
     Vector3 velocity = new Vector3();
     public Vector3 direction = new Vector3();
@@ -214,6 +214,10 @@ public class Character : MonoBehaviour
 
     public void TakeDamage(float damage, Vector3 damagedVec)
     {
+        if (!canHit)
+        {
+            return;
+        }
         if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("Fall Down"))
         {
             animator.SetTrigger("Fall Down");

@@ -80,9 +80,10 @@ namespace UnityEngine.Rendering.PostProcessing
             CleanBaseTypes();
 
             // Rebuild the base type map
-            var types = RuntimeUtilities.GetAllTypesDerivedFrom<PostProcessEffectSettings>()
+            var types = RuntimeUtilities.GetAllAssemblyTypes()
                             .Where(
-                                t => t.IsDefined(typeof(PostProcessAttribute), false)
+                                t => t.IsSubclassOf(typeof(PostProcessEffectSettings))
+                                  && t.IsDefined(typeof(PostProcessAttribute), false)
                                   && !t.IsAbstract
                             );
 

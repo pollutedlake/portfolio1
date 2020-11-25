@@ -58,9 +58,10 @@ namespace UnityEditor.Rendering.PostProcessing
             m_Editors = new List<PostProcessEffectBaseEditor>();
 
             // Gets the list of all available postfx editors
-            var editorTypes = RuntimeUtilities.GetAllTypesDerivedFrom<PostProcessEffectBaseEditor>()
+            var editorTypes = RuntimeUtilities.GetAllAssemblyTypes()
                                 .Where(
-                                    t => t.IsDefined(typeof(PostProcessEditorAttribute), false)
+                                    t => t.IsSubclassOf(typeof(PostProcessEffectBaseEditor))
+                                      && t.IsDefined(typeof(PostProcessEditorAttribute), false)
                                       && !t.IsAbstract
                                 );
 

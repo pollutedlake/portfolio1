@@ -8,45 +8,7 @@ namespace UnityEngine.Rendering.PostProcessing
     /// </summary>
     public enum ScreenSpaceReflectionPreset
     {
-        /// <summary>
-        /// Lowest quality.
-        /// </summary>
-        Lower,
-
-        /// <summary>
-        /// Low quality.
-        /// </summary>
-        Low,
-
-        /// <summary>
-        /// Medium quality.
-        /// </summary>
-        Medium,
-
-        /// <summary>
-        /// High quality.
-        /// </summary>
-        High,
-
-        /// <summary>
-        /// Higher quality.
-        /// </summary>
-        Higher,
-
-        /// <summary>
-        /// Ultra quality.
-        /// </summary>
-        Ultra,
-
-        /// <summary>
-        /// Overkill (as in: don't use) quality.
-        /// </summary>
-        Overkill,
-
-        /// <summary>
-        /// Custom, tweakable quality settings.
-        /// </summary>
-        Custom
+        Lower, Low, Medium, High, Higher, Ultra, Overkill, Custom
     }
 
     /// <summary>
@@ -135,11 +97,7 @@ namespace UnityEngine.Rendering.PostProcessing
         [Range(0f, 1f), Tooltip("Fades reflections close to the screen edges.")]
         public FloatParameter vignette = new FloatParameter { value = 0.5f };
 
-        /// <summary>
-        /// Returns <c>true</c> if the effect is currently enabled and supported.
-        /// </summary>
-        /// <param name="context">The current post-processing render context</param>
-        /// <returns><c>true</c> if the effect is currently enabled and supported</returns>
+        /// <inheritdoc />
         public override bool IsEnabledAndSupported(PostProcessRenderContext context)
         {
             return enabled
@@ -153,7 +111,9 @@ namespace UnityEngine.Rendering.PostProcessing
         }
     }
 
+#if UNITY_2017_1_OR_NEWER
     [UnityEngine.Scripting.Preserve]
+#endif
     internal sealed class ScreenSpaceReflectionsRenderer : PostProcessEffectRenderer<ScreenSpaceReflections>
     {
         RenderTexture m_Resolve;
@@ -306,7 +266,6 @@ namespace UnityEngine.Rendering.PostProcessing
 
             var compute = context.resources.computeShaders.gaussianDownsample;
             int kernel = compute.FindKernel("KMain");
-            var mipFormat = RuntimeUtilities.defaultHDRRenderTextureFormat;
 
             var last = new RenderTargetIdentifier(m_Resolve);
 
@@ -315,7 +274,7 @@ namespace UnityEngine.Rendering.PostProcessing
                 size >>= 1;
                 Assert.IsTrue(size > 0);
 
-                cmd.GetTemporaryRT(m_MipIDs[i], size, size, 0, FilterMode.Bilinear, mipFormat, RenderTextureReadWrite.Default, 1, true);
+                cmd.GetTemporaryRT(m_MipIDs[i], size, size, 0, FilterMode.Bilinear, context.sourceFormat, RenderTextureReadWrite.Default, 1, true);
                 cmd.SetComputeTextureParam(compute, kernel, "_Source", last);
                 cmd.SetComputeTextureParam(compute, kernel, "_Result", m_MipIDs[i]);
                 cmd.SetComputeVectorParam(compute, "_Size", new Vector4(size, size, 1f / size, 1f / size));

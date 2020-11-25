@@ -37,6 +37,10 @@ public class HeadButt : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            if (!other.GetComponent<Character>().canHit)
+            {
+                return;
+            }
             Character character = other.GetComponent<Character>();
             Vector3 damagedVec = new Vector3(other.ClosestPoint(capsuleCollider.center).x - capsuleCollider.center.x, character.transform.position.y, other.ClosestPoint(capsuleCollider.center).z - capsuleCollider.center.z);
             character.TakeDamage(10.0f, damagedVec);

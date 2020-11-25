@@ -41,15 +41,15 @@ public class PlayerRoll : StateMachineBehaviour
     {
         Vector3 velocity = direction * 3.0f * Time.deltaTime;
         character.transform.position += velocity;
-        //character.canHit = false;
-        capsuleCollider.enabled = false;
+        character.canHit = false;
+        //capsuleCollider.enabled = false;
     }
 
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        //character.canHit = true;
-        capsuleCollider.enabled = true;
+        character.canHit = true;
+        //capsuleCollider.enabled = true;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
