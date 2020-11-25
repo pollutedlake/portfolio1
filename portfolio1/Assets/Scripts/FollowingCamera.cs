@@ -48,7 +48,13 @@ public class FollowingCamera : MonoBehaviour
         verticalAngle = Mathf.Clamp(verticalAngle, -90.0f, 65.0f);
         // 타겟으로부터의 각도 구하기
         Quaternion angle = Quaternion.Euler(verticalAngle, horizontalAngle, 0.0f);
-        cameraRay = new Ray(transform.position, transform.forward);
+        cameraRay = new Ray(target.transform.position + lookOffset, -transform.forward);
+        RaycastHit hitInfo;
+        bool isGround = Physics.Raycast(cameraRay, out hitInfo, (transform.position - target.transform.position).magnitude, 1 << 9);
+        if (isGround)
+        {
+            transform.position = hitInfo.point;
+        }
         if (Input.GetKey(KeyCode.C) && target.animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
         {
             aimImg.gameObject.SetActive(true);
@@ -80,7 +86,7 @@ public class FollowingCamera : MonoBehaviour
             }
             camera.fieldOfView = fov;
             // 타겟으로부터의 위치 구하기
-            distanceFromTarget = Vector3.Lerp(distanceFromTarget, notAimingDist, Time.deltaTime * sensitivity);
+            //distanceFromTarget = Vector3.Lerp(distanceFromTarget, notAimingDist, Time.deltaTime * sensitivity);
             // 보는 지점 구하기
             lookPosition = target.transform.position + lookOffset;
         }
