@@ -20,10 +20,15 @@ public class Monster : MonoBehaviour
     public CapsuleCollider capsuleCollider;
     public UIMgr uiMgr;
     public AudioSource roarSound;
+    public Rigidbody rigidbody;
 
     // Start is called before the first frame update
     public void setUp()
     {
+        if (rigidbody == null)
+        {
+            rigidbody = GetComponent<Rigidbody>();
+        }
         if (uiMgr == null)
         {
             uiMgr = FindObjectOfType<UIMgr>();

@@ -113,7 +113,7 @@ public class Character : MonoBehaviour
             inputComponent.mouseLBtn = false;
             if (animator.GetBool("Draw Long Sword"))
             {
-                if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack") && !animator.GetCurrentAnimatorStateInfo(0).IsName("AttackWaiting"))
+                if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move") && !animator.GetCurrentAnimatorStateInfo(0).IsName("AttackWaiting"))
                 {
                     attackCount++;
                     animator.SetInteger("AttackCount", attackCount);

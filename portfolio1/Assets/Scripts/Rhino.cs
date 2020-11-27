@@ -101,20 +101,52 @@ public class Rhino : Monster
                     }
                 }
                 break;
+            case 2:
+                capsuleCollider.center = new Vector3(-0.7f, 0, capsuleCollider.center.z);
+                break;
         }
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && other.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            rigidbody.isKinematic = true;
+        }
+        else
+        {
+            rigidbody.isKinematic = false;
+        }
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && collision.gameObject.CompareTag("Player"))
         {
             if (!character.canHit)
             {
                 return;
             }
-            Vector3 damagedVec = new Vector3(other.ClosestPoint(capsuleCollider.center).x - capsuleCollider.center.x, character.transform.position.y, other.ClosestPoint(capsuleCollider.center).z - capsuleCollider.center.z);
+            Vector3 damagedVec = new Vector3(collision.collider.ClosestPoint(capsuleCollider.center).x - capsuleCollider.center.x, character.transform.position.y, collision.collider.ClosestPoint(capsuleCollider.center).z - capsuleCollider.center.z);
             character.TakeDamage(20.0f, damagedVec);
         }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        //if (other.gameObject.CompareTag("Player"))
+        //{
+        //    rigidbody.isKinematic = true;
+        //}
+        //else
+        //{
+        //    rigidbody.isKinematic = false;
+        //}
+        //if (animator.GetCurrentAnimatorStateInfo(0).IsName("Run") && other.gameObject.CompareTag("Player"))
+        //{
+        //    if (!character.canHit)
+        //    {
+        //        return;
+        //    }
+        //    Vector3 damagedVec = new Vector3(other.ClosestPoint(capsuleCollider.center).x - capsuleCollider.center.x, character.transform.position.y, other.ClosestPoint(capsuleCollider.center).z - capsuleCollider.center.z);
+        //    character.TakeDamage(20.0f, damagedVec);
+        //}
         if (other.gameObject.CompareTag("Weapon"))
         {
             Damaged(10.0f);

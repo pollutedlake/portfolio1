@@ -48,13 +48,6 @@ public class FollowingCamera : MonoBehaviour
         verticalAngle = Mathf.Clamp(verticalAngle, -90.0f, 65.0f);
         // 타겟으로부터의 각도 구하기
         Quaternion angle = Quaternion.Euler(verticalAngle, horizontalAngle, 0.0f);
-        cameraRay = new Ray(target.transform.position + lookOffset, -transform.forward);
-        RaycastHit hitInfo;
-        bool isGround = Physics.Raycast(cameraRay, out hitInfo, (transform.position - target.transform.position).magnitude, 1 << 9);
-        if (isGround)
-        {
-            transform.position = hitInfo.point;
-        }
         if (Input.GetKey(KeyCode.C) && target.animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
         {
             aimImg.gameObject.SetActive(true);
@@ -96,6 +89,14 @@ public class FollowingCamera : MonoBehaviour
         // 위치 및 방향 설정
         transform.position = newPosition;
         transform.LookAt(lookPosition);
+
+        cameraRay = new Ray(target.transform.position + lookOffset, -transform.forward);
+        RaycastHit hitInfo;
+        bool isGround = Physics.Raycast(cameraRay, out hitInfo, (transform.position - target.transform.position).magnitude, 1 << 9);
+        if (isGround)
+        {
+            transform.position = hitInfo.point;
+        }
 
         //float fov = camera.fieldOfView;
         //fov += Input.GetAxis("Mouse ScrollWheel") * sensitivity;
