@@ -15,17 +15,12 @@ public class SlingerObject : MonoBehaviour
         }    
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public Projectile Interact(GameObject leftHand)
     {
         return PickUp(leftHand);
     }
 
+    // 슬링어를 줍는 함수(슬링어를 생성해 왼손 위에 위치시킨다.)
     public Projectile PickUp(GameObject leftHand)
     {
         Projectile projectile = Instantiate(projectilePrefab, leftHand.transform);

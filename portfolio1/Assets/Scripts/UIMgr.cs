@@ -7,18 +7,11 @@ public class UIMgr : MonoBehaviour
 {
     public DamageText damageTextPrefab;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /// <summary>
+    /// 데미지를 보여주는 함수
+    /// </summary>
+    /// <param name="spawnPoint"> 데미지가 나타나는 위치 </param>
+    /// <param name="damage"> 데미지 수치 </param>
     public void ShowDamage(Vector3 spawnPoint, float damage)
     {
         DamageText damageText = Instantiate(damageTextPrefab);

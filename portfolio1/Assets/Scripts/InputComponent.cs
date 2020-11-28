@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class InputComponent : MonoBehaviour
 {
-    public Vector2 input;       // 입력받을 character가 움직일 방향
+    // 입력될 Character가 움직일 방향과 관련된 변수
+    public Vector2 input;
     public string horizontalAxis = "Horizontal";
     public string verticalAxis = "Vertical";
+
+    // Character 상태와 관련된 변수
     public bool isRun = false;
     public bool isRoll = false;
     public bool mouseLBtn = false;

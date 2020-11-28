@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class DamageText : MonoBehaviour
 {
-    private float destroyT;
+    private float destroyT;     // DamageText가 사라지는데 걸리는 시간
     public float damage;
 
     // Start is called before the first frame update

@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class Weapon : MonoBehaviour
 {
+    // 무기 위치에 관련된 변수
     public GameObject rightHand;
     public GameObject spine1;
     public GameObject drawPosition;
     public GameObject sheathPosition;
+
     private Animator charAnimator;
     private CapsuleCollider capsuleCollider;
 
+    // 무기를 뽑는 함수
     public void DrawWeapon()
     {
         transform.parent = rightHand.transform;
@@ -18,6 +21,7 @@ public class Weapon : MonoBehaviour
         transform.localRotation = drawPosition.transform.localRotation;
     }
 
+    // 무기를 넣는 함수
     public void SheathWeapon()
     {
         transform.parent = spine1.transform;
@@ -25,7 +29,7 @@ public class Weapon : MonoBehaviour
         transform.localRotation = sheathPosition.transform.localRotation;
     }
 
-    // Start is called before the first frame update
+    // 무기를 넣고 뽑을 때 위치 초기화
     void Start()
     {
         if (charAnimator == null)
@@ -48,7 +52,8 @@ public class Weapon : MonoBehaviour
         transform.rotation = sheathPosition.transform.rotation;
     }
 
-    // Update is called once per frame
+
+    // 캐릭터 공격 시 capsuleCollder를 켰다가 아닐 때는 끈다.
     void Update()
     {
         if (charAnimator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
