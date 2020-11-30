@@ -11,7 +11,6 @@ public class InputComponent : MonoBehaviour
 
     // Character 상태와 관련된 변수
     public bool isRun = false;
-    public bool isRoll = false;
     public bool mouseLBtn = false;
     private Animator animator;
 
@@ -35,10 +34,6 @@ public class InputComponent : MonoBehaviour
         else
         {
             isRun = false;
-        }
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            isRoll = true;
         }
         if (Input.GetMouseButtonDown(0))
         {

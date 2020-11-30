@@ -1,0 +1,635 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GRP Version="2.0.0.1" Mode="0" TemplateObjectCnt="0">
+    <GrTxtBrushArr Size="4">
+        <GrTxtBrush Type="0" GradientType="0" Color="ffffffff" GradientColor1="ff000000" GradientColor2="ff000000" KeepRate="false" Alpha="255" IgnoreBgColor="false"/>
+        <GrTxtBrush Type="1" GradientType="0" Color="ffffffff" GradientColor1="fff70000" GradientColor2="ff000000" KeepRate="false" Alpha="255" IgnoreBgColor="false"/>
+        <GrTxtBrush Type="0" GradientType="0" Color="ff97fcfb" GradientColor1="00000000" GradientColor2="00000000" KeepRate="false" Alpha="255" IgnoreBgColor="false"/>
+        <GrTxtBrush Type="0" GradientType="0" Color="ffffffff" GradientColor1="00000000" GradientColor2="00000000" KeepRate="false" Alpha="255" IgnoreBgColor="false"/>
+    </GrTxtBrushArr>
+    <GrTxtOutlineArr Size="3">
+        <GrTxtOutline Color="ff000000" Ratio="0.10000000000000001"/>
+        <GrTxtOutline Color="ffffffff" Ratio="0.14999999999999999"/>
+        <GrTxtOutline Color="ff000000" Ratio="0.14999999999999999"/>
+    </GrTxtOutlineArr>
+    <GrTxtShadowArr Size="2">
+        <GrTxtShadow Color="00000000" ThickRatio="0.14999999999999999" Shadow_Type2="4"/>
+        <GrTxtShadow Color="00000000" ThickRatio="0" Shadow_Type2="0"/>
+    </GrTxtShadowArr>
+    <GrTimelineViewMode Mode="15" output_width="1280" output_height="720"/>
+    <GrEncodingPath Path="C:\Users\psh95\OneDrive\바탕 화면\상현\공부\Game Programing\portfolio1\portfolio1\portfolio1\"/>
+    <GrVideoArr Size="6">
+        <GrVideo>
+            <GrVideoData FileName="C:\Users\psh95\Videos\Captures\portfolio1 - SampleScene - PC, Mac &amp; Linux Standalone - Unity 2019.3.3f1 Personal _DX11_ 2020-11-30 15-28-47.mp4" SegStart="0" SegEnd="3132" FadeType="0" ScreenTransformType="0" ScreenTransformTime="0" Mute="false" Volume="1" Tempo="1"/>
+            <GrVideoColorAdjust/>
+            <GrVideoFilter VideoColor="0" VideoColorType="0" VideoEffect="0" VideoEffectValue="20" FilterUseLookupFile="0" FilterUseVignetteFile="0"/>
+            <GrVideoTextureAdjust/>
+        </GrVideo>
+        <GrVideo>
+            <GrVideoData FileName="C:\Users\psh95\Videos\Captures\portfolio1 - SampleScene - PC, Mac &amp; Linux Standalone - Unity 2019.3.3f1 Personal _DX11_ 2020-11-30 15-50-07.mp4" SegStart="1427" SegEnd="1903" FadeType="0" ScreenTransformType="0" ScreenTransformTime="0" Mute="false" Volume="1" Tempo="1"/>
+            <GrVideoColorAdjust/>
+            <GrVideoFilter VideoColor="0" VideoColorType="0" VideoEffect="0" VideoEffectValue="20" FilterUseLookupFile="0" FilterUseVignetteFile="0"/>
+            <GrVideoTextureAdjust/>
+        </GrVideo>
+        <GrVideo>
+            <GrVideoData FileName="C:\Users\psh95\Videos\Captures\portfolio1 - SampleScene - PC, Mac &amp; Linux Standalone - Unity 2019.3.3f1 Personal _DX11_ 2020-11-30 15-55-58.mp4" SegStart="4608" SegEnd="4929" FadeType="0" ScreenTransformType="0" ScreenTransformTime="0" Mute="false" Volume="1" Tempo="1"/>
+            <GrVideoColorAdjust/>
+            <GrVideoFilter VideoColor="0" VideoColorType="0" VideoEffect="0" VideoEffectValue="20" FilterUseLookupFile="0" FilterUseVignetteFile="0"/>
+            <GrVideoTextureAdjust/>
+        </GrVideo>
+        <GrVideo>
+            <GrVideoData FileName="C:\Users\psh95\Videos\Captures\portfolio1 - SampleScene - PC, Mac &amp; Linux Standalone - Unity 2019.3.3f1 Personal _DX11_ 2020-11-30 17-06-40.mp4" SegStart="766" SegEnd="1611" FadeType="0" ScreenTransformType="0" ScreenTransformTime="0" Mute="false" Volume="1" Tempo="1"/>
+            <GrVideoColorAdjust/>
+            <GrVideoFilter VideoColor="0" VideoColorType="0" VideoEffect="0" VideoEffectValue="20" FilterUseLookupFile="0" FilterUseVignetteFile="0"/>
+            <GrVideoTextureAdjust/>
+        </GrVideo>
+        <GrVideo>
+            <GrVideoData FileName="C:\Users\psh95\Videos\Captures\portfolio1 - SampleScene - PC, Mac &amp; Linux Standalone - Unity 2019.3.3f1 Personal _DX11_ 2020-11-30 16-07-02.mp4" SegStart="1783" SegEnd="2128" FadeType="0" ScreenTransformType="0" ScreenTransformTime="0" Mute="false" Volume="1" Tempo="1"/>
+            <GrVideoColorAdjust/>
+            <GrVideoFilter VideoColor="0" VideoColorType="0" VideoEffect="0" VideoEffectValue="20" FilterUseLookupFile="0" FilterUseVignetteFile="0"/>
+            <GrVideoTextureAdjust/>
+        </GrVideo>
+        <GrVideo>
+            <GrVideoData FileName="C:\Users\psh95\Videos\Captures\portfolio1 - SampleScene - PC, Mac &amp; Linux Standalone - Unity 2019.3.3f1 Personal _DX11_ 2020-11-30 17-06-40.mp4" SegStart="1611" SegEnd="4974" FadeType="0" ScreenTransformType="0" ScreenTransformTime="0" Mute="false" Volume="1" Tempo="1"/>
+            <GrVideoColorAdjust/>
+            <GrVideoFilter VideoColor="0" VideoColorType="0" VideoEffect="0" VideoEffectValue="20" FilterUseLookupFile="0" FilterUseVignetteFile="0"/>
+            <GrVideoTextureAdjust/>
+        </GrVideo>
+    </GrVideoArr>
+    <GrObjArr Size="15">
+        <GrObj Type="4">
+            <GrTxtData Title="무기를 뽑고 넣는 모션" GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="1549" TotalSeg="457" VideoIndex="0" EffectListID="1" PosX="50.585938" PosY="88.310188" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="12">
+                <GrTxtAtt Code="47924" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44592" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48977" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44256" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45347" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45716" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47784" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49496" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="마우스 이동에 따라 카메라가 플레이어 주위를 회전합니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="505" TotalSeg="199" VideoIndex="0" EffectListID="2" PosX="50.585938" PosY="88.310188" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="31">
+                <GrTxtAtt Code="47560" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50864" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46041" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50640" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46384" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46972" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="52852" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47700" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46972" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54540" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47112" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51452" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50948" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54924" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51204" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54633" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="카메라가 이동 시 Raycast를 이용해 지형을 통과하지 않습니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="706" TotalSeg="199" VideoIndex="0" EffectListID="3" PosX="50.065105" PosY="88.310188" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="37">
+                <GrTxtAtt Code="52852" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47700" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46972" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46041" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49884" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="82" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="97" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="121" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="99" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="97" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="115" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="116" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50857" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54644" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54805" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51012" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53685" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44284" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54616" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50506" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49845" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="플레이어 행동을 좀 보여드리겠습니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="1350" TotalSeg="199" VideoIndex="0" EffectListID="4" PosX="50.585938" PosY="88.310188" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="20">
+                <GrTxtAtt Code="54540" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47112" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54665" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46041" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51012" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51328" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48372" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50668" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46300" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47532" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44192" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49845" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="걷고 뛰고 구르기" GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="2007" TotalSeg="663" VideoIndex="0" EffectListID="5" PosX="50.585938" PosY="88.310188" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="9">
+                <GrTxtAtt Code="44151" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44256" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46832" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44256" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44396" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47476" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44592" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="뛰는 동안 지속적으로 스태미나를 소비하고
+구르기도 일정 스태미나를 소비합니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="2670" TotalSeg="462" VideoIndex="0" EffectListID="6" PosX="55.664063" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="43">
+                <GrTxtAtt Code="46832" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45716" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46041" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50504" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49549" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51201" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51004" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47196" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53468" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48120" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45208" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49548" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48708" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54616" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44256" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="13" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44396" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47476" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44592" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46020" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51068" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51221" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53468" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48120" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45208" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49548" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48708" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54633" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="스태미나를 다 소비했을 경우 탈진상태가 되어 움직이지 못합니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="6" TotalSeg="462" VideoIndex="1" EffectListID="7" PosX="50.911457" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="35">
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53468" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48120" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45208" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49548" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48708" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54664" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51012" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44221" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50864" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53448" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51652" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49345" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53468" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46104" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50880" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51649" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47803" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54633" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="몬스터에게는 시야역할을 할 Ray가 있습니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="475" TotalSeg="322" VideoIndex="1" EffectListID="8" PosX="50.911457" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="25">
+                <GrTxtAtt Code="47788" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53552" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50640" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44172" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45716" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49884" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50556" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50669" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54624" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51012" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54624" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="82" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="97" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="121" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51080" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49845" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="몬스터는 평소에는 지정된 지점들을 Patrol합니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="0" TotalSeg="559" VideoIndex="3" EffectListID="9" PosX="50.911457" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="29">
+                <GrTxtAtt Code="47788" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53552" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45716" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54217" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49548" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50640" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45716" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51221" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46108" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51216" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46308" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51012" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="80" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="97" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="116" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="114" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="111" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="108" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54633" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="시야에 Raycast로 플레이어가 들어오거나 
+공격을 받으면 포효를 시작으로 전투에 돌입합니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="559" TotalSeg="557" VideoIndex="3" EffectListID="10" PosX="55.92448" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="53">
+                <GrTxtAtt Code="49884" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50556" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50640" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="82" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="97" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="121" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="99" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="97" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="115" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="116" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47196" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54540" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47112" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46308" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50724" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44144" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45208" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="13" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44277" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44201" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51012" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48155" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51004" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47732" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54252" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54952" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49884" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51089" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51004" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47196" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51204" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53804" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50640" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46028" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51077" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54633" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="포효를 맞으면 플레이어는 잠시 움직일 수 없으나
+구르기를 통해 회피할 수 있습니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="272" TotalSeg="563" VideoIndex="4" EffectListID="11" PosX="55.92448" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="46">
+                <GrTxtAtt Code="54252" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54952" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47582" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51004" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47732" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54540" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47112" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45716" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51104" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49884" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50880" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51649" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51068" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49688" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50630" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51004" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45208" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="13" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44396" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47476" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44592" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53685" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54644" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54924" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54588" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54624" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49688" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51080" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49845" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="포효뿐만 아니라 몬스터의 공격들도
+구르기를 통해 회피할 수 있습니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="503" TotalSeg="569" VideoIndex="5" EffectListID="12" PosX="52.408855" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="38">
+                <GrTxtAtt Code="54252" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54952" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49104" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47564" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50500" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46972" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47788" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53552" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44277" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44201" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46308" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46020" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="13" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44396" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47476" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44592" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53685" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54644" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54924" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54588" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54624" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49688" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51080" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49845" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="몬스터의 공격에 맞으면 맞은 방향으로 날라가며
+데미지를 입고 다운됩니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="1085" TotalSeg="568" VideoIndex="5" EffectListID="13" PosX="52.408855" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="40">
+                <GrTxtAtt Code="47788" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53552" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44277" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44201" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50640" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47582" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51004" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47732" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47582" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51008" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48169" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54693" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51004" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47196" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45216" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46972" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47728" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="13" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45936" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48120" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51077" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44256" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50868" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46121" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="일정 시간이 지나거나 입력이 들어오면 일어납니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="1655" TotalSeg="568" VideoIndex="5" EffectListID="14" PosX="52.408855" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="27">
+                <GrTxtAtt Code="51068" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51221" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49884" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44036" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45208" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44144" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45208" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51077" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47141" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46308" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50724" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47732" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51068" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50612" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45225" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+        <GrObj Type="4">
+            <GrTxtData Title="몬스터를 공격하면 맞은 부위에 데미지가 표시되고
+몬스터의 체력이 0이 되면 죽습니다." GrEffectType="0" BackEffectType="1000" FirstEffectTime="0" BackEffectTime="100" ApplyAll="0" Align="1" StartSeg="2225" TotalSeg="568" VideoIndex="5" EffectListID="15" PosX="52.408855" PosY="88.078705" bTemplateObject="0" TemplateObjectID="-1" BrushType="4" GradientType="0" PlaceHolderType="0" Color="00000000" Tempo="1"/>
+            <GrTxtAttArr Size="47">
+                <GrTxtAtt Code="47788" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53552" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47484" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44277" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44201" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54616" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47732" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47582" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51008" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48512" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50948" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="50640" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45936" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48120" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51648" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="54364" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49884" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46104" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="44256" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="13" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47788" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49828" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="53552" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51032" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="52404" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47141" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="48" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51060" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46104" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="47732" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="32" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="51453" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="49845" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45768" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="45796" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+                <GrTxtAtt Code="46" FontSize="40" FontStyle="1" FaceName="궁서" BrushID="3" ShadowID="1" OutlineID="2"/>
+            </GrTxtAttArr>
+        </GrObj>
+    </GrObjArr>
+    <GrAudioArr Size="0"/>
+    <GrEffectArr Size="0"/>
+</GRP>

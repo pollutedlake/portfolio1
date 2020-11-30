@@ -151,17 +151,20 @@ public class Character : MonoBehaviour
         }
 
         // 구르기 입력시 움직이는 상태일 때 스태미나를 소비하면서 구른다. 스태미나가 충분하지 않을 때는 구르지 않는다.
-        if (inputComponent.isRoll)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
             {
                 if(!(curStamina < 20.0f))
                 {
                     curStamina -= 20.0f;
-                    inputComponent.isRoll = false;
-                    animator.SetTrigger("Roll");
+                    animator.SetBool("IsRoll", true);
                 }
             }
+        }
+        else
+        {
+            animator.SetBool("IsRoll", false);
         }
 
         // 넘어지는게 끝났을 때 충분한 시간이 지나거나 이동 입력이 들어오면 자동으로 일어난다.
@@ -261,22 +264,18 @@ public class Character : MonoBehaviour
         {
             return;
         }
-        //if (!animator.GetCurrentAnimatorStateInfo(0).IsTag("Fall Down"))
-        //{
             animator.SetTrigger("Fall Down");
             if (curHp > 0)
             {
                 canHit = false;
                 curHp -= damage;
-                transform.forward = -damagedVec.normalized;
-                rigidbody.AddForce(-transform.forward * 5.0f, ForceMode.Impulse);       // 데미지를 받으면 캐릭터가 날라간다.
+                rigidbody.AddForce(damagedVec.normalized * damage, ForceMode.Impulse);       // 데미지를 받으면 캐릭터가 날라간다.
             }
             if (!(curHp > 0))
             {
                 // 사망 이벤트
             }
             hpBar.rectTransform.localScale = new Vector3((float)curHp / (float)maxHp, 1.0f, 1.0f);
-        //}
     }
 
     private void OnTriggerStay(Collider other)
