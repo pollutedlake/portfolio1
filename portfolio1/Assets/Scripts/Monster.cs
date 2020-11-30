@@ -84,24 +84,38 @@ public class Monster : MonoBehaviour
     {
         Vector3 direction = patrolPoint[patrolIdx].transform.position - transform.position;
         direction = new Vector3(direction.x, 0, direction.z);
-        // Patrol지점까지 도달하면 일정 시간 대기하다가 다음 Patrol지점을 구한다.
-        if (direction.sqrMagnitude < 0.1f)
+        if (animator.GetCurrentAnimatorStateInfo(0).IsName("Turn"))
         {
-            patrolWaitingT += Time.deltaTime;
-            animator.SetBool("Walk", false);
-            if (patrolWaitingT > 2.0f)
+
+            if ((transform.forward - direction.normalized).sqrMagnitude < 0.1f)
             {
-                patrolWaitingT = 0.0f;
-                patrolIdx++;
-                patrolIdx %= patrolPoint.Length;
+                animator.SetBool("Turn", false);
                 animator.SetBool("Walk", true);
+            }
+            else
+            {
+                transform.forward = Vector3.Lerp(transform.forward, direction.normalized, Time.deltaTime * 3.0f);
             }
         }
         else
         {
-            Quaternion lookRotation = Quaternion.LookRotation(direction.normalized);
-            transform.rotation = lookRotation;
-            transform.position += direction.normalized * Time.deltaTime * patrolSpeed;
+            // Patrol지점까지 도달하면 일정 시간 대기하다가 다음 Patrol지점을 구한다.
+            if (direction.sqrMagnitude < 0.1f)
+            {
+                patrolWaitingT += Time.deltaTime;
+                animator.SetBool("Walk", false);
+                if (patrolWaitingT > 2.0f)
+                {
+                    animator.SetBool("Turn", true);
+                    patrolWaitingT = 0.0f;
+                    patrolIdx++;
+                    patrolIdx %= patrolPoint.Length;
+                }
+            }
+            else
+            {
+                transform.position += direction.normalized * Time.deltaTime * patrolSpeed;
+            }
         }
     }
 

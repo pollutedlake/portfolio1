@@ -285,8 +285,13 @@ public class Character : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.F))
             {
-                slinger = other.GetComponent<SlingerObject>().Interact(leftHand);
-                slingerN = 20;
+                if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
+                {
+                    animator.SetBool("Pick Up", true);
+                    animator.SetBool("Pick Up", false);
+                    slinger = other.GetComponent<SlingerObject>().Interact(leftHand);
+                    slingerN = 20;
+                }
             }
         }
     }

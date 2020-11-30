@@ -53,7 +53,6 @@ public class Rhino : Monster
                         {
                             if (attackPattern > 0.4f)
                             {
-                                
                                 animator.SetTrigger("HeadButt");
                             }
                             else if (attackPattern < 0.1f)
@@ -61,6 +60,10 @@ public class Rhino : Monster
                                 runDir = dirToChar.normalized;
                                 transform.forward = runDir;
                                 animator.SetBool("Rush", true);
+                            }
+                            else
+                            {
+                                animator.SetBool("Turn", true);
                             }
                         }
 
@@ -78,6 +81,18 @@ public class Rhino : Monster
                                 animator.SetBool("Rush", true);
                             }
                         }
+                    }
+                }
+
+                if (animator.GetCurrentAnimatorStateInfo(0).IsName("Turn"))
+                {
+                    if ((transform.forward - dirToChar.normalized).sqrMagnitude < 0.1f)
+                    {
+                        animator.SetBool("Turn", false);
+                    }
+                    else
+                    {
+                        transform.forward = Vector3.Lerp(transform.forward, dirToChar.normalized, Time.deltaTime * 3.0f);
                     }
                 }
 
