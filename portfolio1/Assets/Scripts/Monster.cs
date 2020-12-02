@@ -88,7 +88,7 @@ public class Monster : MonoBehaviour
         if (animator.GetCurrentAnimatorStateInfo(0).IsName("Turn"))
         {
 
-            if ((transform.forward - direction.normalized).sqrMagnitude < 0.1f)
+            if ((transform.forward - direction.normalized).sqrMagnitude < 0.01f)
             {
                 animator.SetBool("Turn", false);
                 animator.SetBool("Walk", true);

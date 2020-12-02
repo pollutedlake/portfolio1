@@ -37,6 +37,8 @@ public class Character : MonoBehaviour
     private bool fallDownEnd = false;
     public bool canHit = true;
 
+    private Ray areaCheckRay;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -200,6 +202,15 @@ public class Character : MonoBehaviour
                 }
             }
         }
+
+        areaCheckRay = new Ray(transform.position, transform.position - new Vector3(0.0f, 2.0f, 0.0f));
+        RaycastHit hitInfo;
+        bool isArea = Physics.Raycast(areaCheckRay, out hitInfo, 2.0f, 1 << 9);
+        if (isArea)
+        {
+            string areaName = hitInfo.collider.name.ToString();
+            GameManager.instance.curCharacterArea = (int)areaName[areaName.Length - 1] - 48;
+        }
     }
 
     /// <summary>
@@ -306,5 +317,11 @@ public class Character : MonoBehaviour
     public void GetUp()
     {
         fallDownEnd = true;
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(areaCheckRay);
     }
 }

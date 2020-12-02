@@ -15,6 +15,8 @@ public class Rhino : Monster
     private float attackPattern;        
     private Vector3 runDir;     
 
+    private Ray areaCheckRay;
+
     /// <summary>
     /// animator, Monster의 상태들, 초기 상태, 최대 체력, 현재 체력 초기화
     /// </summary>
@@ -134,6 +136,14 @@ public class Rhino : Monster
                 capsuleCollider.center = new Vector3(-0.7f, 0, capsuleCollider.center.z);
                 break;
         }
+        areaCheckRay = new Ray(transform.position, new Vector3(0.0f, -2.0f, 0.0f));
+        RaycastHit hitInfo;
+        bool isArea = Physics.Raycast(areaCheckRay, out hitInfo, 2.0f, 1 << 9);
+        if (isArea)
+        {
+            string areaName = hitInfo.collider.name.ToString();
+            GameManager.instance.curMonsterArea[0] = (int)areaName[areaName.Length - 1] - 48;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -186,5 +196,11 @@ public class Rhino : Monster
                 Shout();
             }
         }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawRay(areaCheckRay);
     }
 }
