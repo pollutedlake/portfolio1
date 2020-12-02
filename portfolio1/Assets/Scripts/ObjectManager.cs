@@ -50,7 +50,6 @@ public class ObjectManager : MonoBehaviour
 
     public void ShowHitEffect(Vector3 position, string kind)
     {
-        Debug.Log("test");
         while (hitEffect[hitEffectIdx].active)
         {
             hitEffectIdx++;

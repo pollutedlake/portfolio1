@@ -229,6 +229,57 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2094548797}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &326971415
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 326971416}
+  - component: {fileID: 326971417}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &326971416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326971415}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -3.6155987, y: -2.762392, z: 13.11158}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &326971417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 326971415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc9358de448ddb640979c0910cc8f172, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 1405890609}
+  Rhino: {fileID: 491315080}
+  curMonsters:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  nodeNumber: 9
+  isCheck: 000000000000000000
 --- !u!1 &335968006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011335475624, guid: 128f20fd9fec12b4e9587d7fd19322b7,
@@ -285,6 +336,18 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300014, guid: 01d2c094f5b70b24295c04d9949815d7, type: 3}
+--- !u!114 &491315080 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1637637501, guid: ff4c76a6e7bf3b040abebd520d19f0bb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1503160857}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 491315078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 112f4d1bb0087ce4b933e6d0de33e5f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &592946687
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +591,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 5.829064e-10, y: 3.097271e+27, z: 1.7849972e+31, w: -6.701373e-10}
+  m_BoundingSphereOverride: {x: 2.5421e-41, y: 1.04e-43, z: 1.3563128e-19, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
