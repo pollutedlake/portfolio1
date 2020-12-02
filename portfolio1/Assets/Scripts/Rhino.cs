@@ -30,12 +30,12 @@ public class Rhino : Monster
     // Update is called once per frame
     void Update()
     {
-        switch ((int)monState)      // Monster의 상태에 따라
+        switch (monState)      // Monster의 상태에 따라
         {
-            case 0:     // Patrol
+            case State.Patrol:
                 Patrol(walkSpeed, ref IdleTime);
                 break;
-            case 1:     // Battle
+            case State.Battle:
                 //Character까지의 방향
                 Vector3 dirToChar = new Vector3(character.transform.position.x - transform.position.x, 0, character.transform.position.z - transform.position.z);
 
@@ -130,7 +130,7 @@ public class Rhino : Monster
                     }
                 }
                 break;
-            case 2:     // Die
+            case State.Die:
                 capsuleCollider.center = new Vector3(-0.7f, 0, capsuleCollider.center.z);
                 break;
         }
@@ -169,6 +169,7 @@ public class Rhino : Monster
         {
             TakeDamage(10.0f);
             uiMgr.ShowDamage(other.ClosestPoint(capsuleCollider.center), 10.0f);
+            objectManager.ShowHitEffect(other.ClosestPoint(capsuleCollider.center), "Hit");
             if (monState == monStates["Patrol"])
             {
                 Shout();

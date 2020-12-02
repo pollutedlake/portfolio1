@@ -21,6 +21,7 @@ public class Monster : MonoBehaviour
     public GameObject[] patrolPoint;
     private int patrolIdx = 0;
 
+    public ObjectManager objectManager;
     public Animator animator;
     public Character character;
     public CapsuleCollider capsuleCollider;

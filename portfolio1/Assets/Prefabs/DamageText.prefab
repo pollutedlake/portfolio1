@@ -59,17 +59,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9716981, g: 0.022917405, b: 0.022917405, a: 1}
+  m_Color: {r: 0.9339623, g: 0.35362637, b: 0.066082224, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -90,5 +90,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ce74ae6aa8763243bcc624dc0326689, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spawnPoint: {x: -4.607397, y: 1.0888141, z: 21.71342}
   damage: 10
