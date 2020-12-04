@@ -4,38 +4,22 @@ using UnityEngine;
 
 public class FireFlies : MonoBehaviour
 {
-    public GameObject fireFlies;
-    public bool isNavigate = false;
-    public List<Vector3> navigatePath = new List<Vector3>();
-    public float speed = 50.0f;
-    public bool isSearch = false;
-    public int navigateIndex;
-
-    // Start is called before the first frame update
-    void Start()
+    public Character character;
+    public    Vector3 characterPosition;
+    private void Start()
     {
-        Instantiate(fireFlies).transform.position = this.transform.position;
+        if (character == null)
+        {
+            character = FindObjectOfType<Character>();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (isNavigate)
+        characterPosition = new Vector3(character.transform.position.x, transform.position.y, character.transform.position.z);
+        if ((characterPosition - transform.position).magnitude < 0.1f)
         {
-            if ((transform.position - navigatePath[navigateIndex]).magnitude < 0.2f)
-            {
-                navigateIndex++;
-            }
-            else
-            {
-                Vector3 direction = navigatePath[navigateIndex] - transform.position;
-                transform.position += direction.normalized * Time.deltaTime * speed;
-                Instantiate(fireFlies).transform.position = this.transform.position;
-            }
-        }
-        if (isSearch)
-        {
-
+            this.gameObject.SetActive(false);
         }
     }
 }

@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     public int curCharacterArea;
     public int[] curMonsterArea = new int[3] { -1, -1, -1 };
     public Vector3[] areaPositions = new Vector3[9];
-    public FireFlies fireFlies;
+    public FireFliesManager fireFlies;
     List<Vector3> navigatePath = new List<Vector3>();
 
     private void Awake()
@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         monsters.Add("Rhino", Rhino.gameObject);
-        Monster[] curMonsters = FindObjectsOfType<Monster>();
+        curMonsters = FindObjectsOfType<Monster>();
     }
 
     // Update is called once per frame
@@ -48,15 +48,15 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             List<int> shortestPath = new List<int>(FindShortestPath(curCharacterArea, curMonsterArea[0]));
-            //navigatePath.Add(areaPositions[curCharacterArea]);
             for (int i = 0; i < shortestPath.Count; i++) {
                 navigatePath.Add(areaPositions[shortestPath[i]]);
             }
+            navigatePath.Add(curMonsters[0].transform.position);
             for(int i = 0; i < navigatePath.Count; i++)
             {
                 Debug.Log(navigatePath[i]);
             }
-            FireFlies fireFliesManager = Instantiate(fireFlies);
+            FireFliesManager fireFliesManager = Instantiate(fireFlies);
             fireFliesManager.transform.position = character.transform.position + new Vector3(0.0f, 2.0f, 0.0f);
             fireFliesManager.navigatePath = navigatePath;
             fireFliesManager.isNavigate = true;
