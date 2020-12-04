@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public bool[] isCheck = new bool[9] { false, false, false, false, false, false, false, false, false };
     public int curCharacterArea;
     public int[] curMonsterArea = new int[3] { -1, -1, -1 };
+    public Vector3[] areaPositions = new Vector3[9];
+    public FireFlies fireFlies;
+    List<Vector3> navigatePath = new List<Vector3>();
 
     private void Awake()
     {
@@ -37,19 +40,30 @@ public class GameManager : MonoBehaviour
     {
         monsters.Add("Rhino", Rhino.gameObject);
         Monster[] curMonsters = FindObjectsOfType<Monster>();
-        FindShortestPath(8, 0);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            
+            List<int> shortestPath = new List<int>(FindShortestPath(curCharacterArea, curMonsterArea[0]));
+            //navigatePath.Add(areaPositions[curCharacterArea]);
+            for (int i = 0; i < shortestPath.Count; i++) {
+                navigatePath.Add(areaPositions[shortestPath[i]]);
+            }
+            for(int i = 0; i < navigatePath.Count; i++)
+            {
+                Debug.Log(navigatePath[i]);
+            }
+            FireFlies fireFliesManager = Instantiate(fireFlies);
+            fireFliesManager.transform.position = character.transform.position + new Vector3(0.0f, 2.0f, 0.0f);
+            fireFliesManager.navigatePath = navigatePath;
+            fireFliesManager.isNavigate = true;
         }
     }
 
-    public void FindShortestPath(int start, int finish)
+    public List<int> FindShortestPath(int start, int finish)
     {
         //isCheck.Initialize();
         //int[] shortestPath = new int[9];
@@ -82,7 +96,10 @@ public class GameManager : MonoBehaviour
         //    isCheck[shortestNode] = true;
         //    current = shortestNode;
         //}
-        isCheck.Initialize();
+        for(int i = 0; i < isCheck.Length; i++)
+        {
+            isCheck[i] = false;
+        }
         float shortestDistance = 99.0f;
         float tempDistance = 0.0f;
         List<int> shortestPath = new List<int>();
@@ -118,16 +135,6 @@ public class GameManager : MonoBehaviour
                 tempPath.RemoveAt(tempPath.Count - 1);
             }
         }
-    }
-
-    public void FindMonster(Monster monster)
-    {
-        Vector3 direction = monster.transform.position - character.transform.position;
-    }
-
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.blue;
-        Gizmos.DrawLine(character.transform.position, Rhino.transform.position);
+        return shortestPath;
     }
 }

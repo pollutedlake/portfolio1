@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\DamageText.cs" />
     <Compile Include="Assets\Scripts\Effects.cs" />
     <Compile Include="Assets\Scripts\EyeSight.cs" />
+    <Compile Include="Assets\Scripts\FireFlies.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HeadButt.cs" />

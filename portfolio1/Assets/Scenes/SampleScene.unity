@@ -228,7 +228,6 @@ GameObject:
   - component: {fileID: 300776264}
   - component: {fileID: 300776263}
   - component: {fileID: 300776262}
-  - component: {fileID: 300776265}
   m_Layer: 9
   m_Name: Terrain5
   m_TagString: Untagged
@@ -294,20 +293,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &300776265
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 300776261}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1 &306288605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8281346260134947241, guid: 154db78b3080b6749a37ddde957fa004,
@@ -373,6 +358,18 @@ MonoBehaviour:
   isCheck: 000000000000000000
   curCharacterArea: 0
   curMonsterArea: 000000000000000000000000
+  areaPositions:
+  - {x: -104.3, y: -3.8, z: -99.5}
+  - {x: -104.3, y: -3.8, z: 0.5}
+  - {x: -104.3, y: -3.8, z: 100.5}
+  - {x: -4.3, y: -3.8, z: -99.5}
+  - {x: -4.3, y: -3.8, z: 0.5}
+  - {x: -4.3, y: -3.8, z: 100.5}
+  - {x: 95.7, y: -3.8, z: -99.5}
+  - {x: 95.7, y: -3.8, z: 0.5}
+  - {x: 95.7, y: -3.8, z: 100.5}
+  fireFlies: {fileID: 7834594322767855500, guid: 66997ba582aa1344bbf11694693d2652,
+    type: 3}
 --- !u!1 &335968006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011335475624, guid: 128f20fd9fec12b4e9587d7fd19322b7,
@@ -552,7 +549,6 @@ GameObject:
   - component: {fileID: 659007122}
   - component: {fileID: 659007121}
   - component: {fileID: 659007120}
-  - component: {fileID: 659007123}
   m_Layer: 9
   m_Name: Terrain3
   m_TagString: Untagged
@@ -618,20 +614,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &659007123
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 659007119}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1001 &664833059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -775,7 +757,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.18e-42, y: 0, z: 0, w: 2.1e-44}
+  m_BoundingSphereOverride: {x: 5.89e-43, y: 8.899544, z: 5.89e-43, w: -7.395807e+24}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -922,7 +904,6 @@ GameObject:
   - component: {fileID: 956686043}
   - component: {fileID: 956686042}
   - component: {fileID: 956686041}
-  - component: {fileID: 956686044}
   m_Layer: 9
   m_Name: Terrain2
   m_TagString: Untagged
@@ -988,20 +969,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &956686044
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 956686040}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1292,7 +1259,6 @@ GameObject:
   - component: {fileID: 1246015587}
   - component: {fileID: 1246015586}
   - component: {fileID: 1246015585}
-  - component: {fileID: 1246015588}
   m_Layer: 9
   m_Name: Terrain8
   m_TagString: Untagged
@@ -1358,20 +1324,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1246015588
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246015584}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1 &1282581031
 GameObject:
   m_ObjectHideFlags: 0
@@ -1413,7 +1365,6 @@ GameObject:
   - component: {fileID: 1318983193}
   - component: {fileID: 1318983192}
   - component: {fileID: 1318983191}
-  - component: {fileID: 1318983194}
   m_Layer: 9
   m_Name: Terrain1
   m_TagString: Untagged
@@ -1479,20 +1430,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1318983194
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1318983190}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1 &1394933231
 GameObject:
   m_ObjectHideFlags: 0
@@ -1504,7 +1441,6 @@ GameObject:
   - component: {fileID: 1394933234}
   - component: {fileID: 1394933233}
   - component: {fileID: 1394933232}
-  - component: {fileID: 1394933235}
   m_Layer: 9
   m_Name: Terrain4
   m_TagString: Untagged
@@ -1570,20 +1506,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1394933235
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1394933231}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1 &1405890606 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 154db78b3080b6749a37ddde957fa004,
@@ -1685,7 +1607,6 @@ GameObject:
   - component: {fileID: 1427773783}
   - component: {fileID: 1427773782}
   - component: {fileID: 1427773781}
-  - component: {fileID: 1427773784}
   m_Layer: 9
   m_Name: Terrain6
   m_TagString: Untagged
@@ -1751,20 +1672,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1427773784
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1427773780}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!224 &1464365308 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4792389099543679739, guid: 5bc5b88b1361d2f4ab5803124ce0d139,
@@ -2150,7 +2057,6 @@ GameObject:
   - component: {fileID: 1734936799}
   - component: {fileID: 1734936798}
   - component: {fileID: 1734936797}
-  - component: {fileID: 1734936800}
   m_Layer: 9
   m_Name: Terrain0
   m_TagString: Untagged
@@ -2216,20 +2122,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1734936800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1734936796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1 &1769263569 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1034452372374031725, guid: 154db78b3080b6749a37ddde957fa004,
@@ -2253,7 +2145,6 @@ GameObject:
   - component: {fileID: 2024635906}
   - component: {fileID: 2024635905}
   - component: {fileID: 2024635904}
-  - component: {fileID: 2024635907}
   m_Layer: 9
   m_Name: Terrain7
   m_TagString: Untagged
@@ -2319,20 +2210,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2024635907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2024635903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a619676c3c9c06f48ba6fab4e11f0953, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isOnMonster: 0
-  isOnCharacter: 0
 --- !u!1 &2031950245
 GameObject:
   m_ObjectHideFlags: 0
@@ -2525,7 +2402,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 154db78b3080b6749a37ddde957fa004,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -100
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 154db78b3080b6749a37ddde957fa004,
         type: 3}
