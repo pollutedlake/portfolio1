@@ -1379,7 +1379,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.5525e-41, y: 1.04e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 4.294e-42, y: 1.04e-43, z: 5.86e-43, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3457,6 +3457,11 @@ PrefabInstance:
       propertyPath: objectManager
       value: 
       objectReference: {fileID: 2031950247}
+    - target: {fileID: 1637637501, guid: ff4c76a6e7bf3b040abebd520d19f0bb, type: 3}
+      propertyPath: footPrintPrefab
+      value: 
+      objectReference: {fileID: -8663375430401593899, guid: 2e55f00e6b3259d46ba3810ff56c226d,
+        type: 3}
     - target: {fileID: 1637637502, guid: ff4c76a6e7bf3b040abebd520d19f0bb, type: 3}
       propertyPath: m_UseGravity
       value: 1

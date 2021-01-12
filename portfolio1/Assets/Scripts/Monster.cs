@@ -81,7 +81,7 @@ public class Monster : MonoBehaviour
     /// </summary>
     /// <param name="patrolSpeed"></param>
     /// <param name="patrolWaitingT"></param>
-    public void Patrol(float patrolSpeed, ref float patrolWaitingT)
+    public void Patrol(float patrolSpeed, ref float patrolWaitingT, ref float footPrintT, FootPrint footPrintPrefab)
     {
         Vector3 direction = patrolPoint[patrolIdx].transform.position - transform.position;
         direction = new Vector3(direction.x, 0, direction.z);
@@ -116,6 +116,15 @@ public class Monster : MonoBehaviour
             else
             {
                 transform.position += direction.normalized * Time.deltaTime * patrolSpeed;
+                footPrintT += Time.deltaTime;
+                if(footPrintT > 10.0f)
+                {
+                    FootPrint footPrint = Instantiate(footPrintPrefab);
+                    footPrint.transform.position = new Vector3(this.gameObject.transform.position.x, -5.8f, this.gameObject.transform.position.z);
+                    footPrint.transform.rotation = this.transform.rotation;
+                    footPrint.transform.Rotate(new Vector3(1, 0, 0), 90);
+                    footPrintT = 0.0f;
+                }
             }
         }
     }

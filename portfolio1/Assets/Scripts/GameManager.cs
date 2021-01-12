@@ -11,15 +11,15 @@ public class GameManager : MonoBehaviour
     public Dictionary<string, GameObject> monsters = new Dictionary<string, GameObject>();
     public Monster[] curMonsters = new Monster[3];
     public int nodeNumber = 9;
-    public float[,] mapGraph = new float[9, 9] { { 99.0f, 1.0f, 99.0f, 99.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
-                                             { 1.0f, 99.0f, 1.0f, 99.0f, 1.0f,99.0f, 99.0f, 99.0f, 99.0f}, 
-                                             { 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f}, 
-                                             { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f}, 
-                                             { Mathf.Sqrt(2.0f), 1.0f, 99.0f, 1.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 1.0f, 99.0f}, 
-                                             { 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 99.0f},
-                                             { 99.0f, 99.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
-                                             { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f},
-                                             { 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f} };
+    //public float[,] mapGraph = new float[9, 9] { { 99.0f, 1.0f, 99.0f, 99.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
+    //                                         { 1.0f, 99.0f, 1.0f, 99.0f, 1.0f,99.0f, 99.0f, 99.0f, 99.0f}, 
+    //                                         { 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f}, 
+    //                                         { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f}, 
+    //                                         { Mathf.Sqrt(2.0f), 1.0f, 99.0f, 1.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 1.0f, 99.0f}, 
+    //                                         { 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 99.0f},
+    //                                         { 99.0f, 99.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
+    //                                         { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f},
+    //                                         { 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f} };
     public bool[] isCheck = new bool[9] { false, false, false, false, false, false, false, false, false };
     public int curCharacterArea;
     public int[] curMonsterArea = new int[3] { -1, -1, -1 };
@@ -47,22 +47,23 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            List<int> shortestPath = new List<int>(FindShortestPath(curCharacterArea, curMonsterArea[0]));
-            for (int i = 0; i < shortestPath.Count; i++) {
-                navigatePath.Add(areaPositions[shortestPath[i]]);
-            }
-            navigatePath.Add(curMonsters[0].transform.position);
-            for(int i = 0; i < navigatePath.Count; i++)
-            {
-                Debug.Log(navigatePath[i]);
-            }
+            //List<int> shortestPath = new List<int>(FindShortestPath(curCharacterArea, curMonsterArea[0]));
+            //for (int i = 0; i < shortestPath.Count; i++) {
+            //    navigatePath.Add(areaPositions[shortestPath[i]]);
+            //}
+            //navigatePath.Add(curMonsters[0].transform.position);
+            //for(int i = 0; i < navigatePath.Count; i++)
+            //{
+            //    Debug.Log(navigatePath[i]);
+            //}
             FireFliesManager fireFliesManager = Instantiate(fireFlies);
             fireFliesManager.transform.position = character.transform.position + new Vector3(0.0f, 2.0f, 0.0f);
-            fireFliesManager.navigatePath = navigatePath;
-            fireFliesManager.isNavigate = true;
+            //fireFliesManager.navigatePath = navigatePath;
+            //fireFliesManager.isNavigate = true;
         }
     }
 
+    /*
     public List<int> FindShortestPath(int start, int finish)
     {
         //isCheck.Initialize();
@@ -137,4 +138,5 @@ public class GameManager : MonoBehaviour
         }
         return shortestPath;
     }
+    */
 }

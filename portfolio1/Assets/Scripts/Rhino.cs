@@ -16,6 +16,8 @@ public class Rhino : Monster
     private Vector3 runDir;     
 
     private Ray areaCheckRay;
+    public FootPrint footPrintPrefab;
+    private float footPrintT = 0.0f;
 
     /// <summary>
     /// animator, Monster의 상태들, 초기 상태, 최대 체력, 현재 체력 초기화
@@ -35,7 +37,8 @@ public class Rhino : Monster
         switch (monState)      // Monster의 상태에 따라
         {
             case State.Patrol:
-                Patrol(walkSpeed, ref IdleTime);
+                Patrol(walkSpeed, ref IdleTime, ref footPrintT, footPrintPrefab);
+                
                 break;
             case State.Battle:
                 //Character까지의 방향
