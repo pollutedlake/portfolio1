@@ -8,6 +8,7 @@ TagManager:
   - SlingerObject
   - Monster
   - Slinger
+  - InteractiveObject
   layers:
   - Default
   - TransparentFX
