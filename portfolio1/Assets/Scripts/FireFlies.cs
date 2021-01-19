@@ -7,6 +7,7 @@ public class FireFlies : MonoBehaviour
     public Character character;
     public Vector3 characterPosition;
     public GameObject target;
+    public UIMgr uiMgr;
 
     public float firingAngle = 45.0f;
     public float gravity = 9.8f;
@@ -21,6 +22,10 @@ public class FireFlies : MonoBehaviour
         {
             StartCoroutine(DetectInteractiveObject());
         }
+        if (uiMgr == null)
+        {
+            uiMgr = FindObjectOfType<UIMgr>();
+        }
     }
 
     private void Update()
@@ -32,6 +37,7 @@ public class FireFlies : MonoBehaviour
             if (distance.sqrMagnitude < 0.1f)
             {
                 target.GetComponent<SpriteRenderer>().color = Color.green;
+                uiMgr.ShowObjectName(target);
                 Destroy(gameObject);
             }
             

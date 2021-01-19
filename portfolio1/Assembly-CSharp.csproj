@@ -67,7 +67,6 @@
     <Compile Include="Assets\Scripts\AttackWaiting.cs" />
     <Compile Include="Assets\Scripts\Character.cs" />
     <Compile Include="Assets\Scripts\CharacterMovement.cs" />
-    <Compile Include="Assets\Scripts\DamageText.cs" />
     <Compile Include="Assets\Scripts\DetectInteractiveObject.cs" />
     <Compile Include="Assets\Scripts\Effects.cs" />
     <Compile Include="Assets\Scripts\EyeSight.cs" />
@@ -78,7 +77,6 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HeadButt.cs" />
     <Compile Include="Assets\Scripts\InputComponent.cs" />
-    <Compile Include="Assets\Scripts\InteractionObject.cs" />
     <Compile Include="Assets\Scripts\Monster.cs" />
     <Compile Include="Assets\Scripts\ObjectManager.cs" />
     <Compile Include="Assets\Scripts\PlayerRoll.cs" />
@@ -87,6 +85,7 @@
     <Compile Include="Assets\Scripts\Singleton.cs" />
     <Compile Include="Assets\Scripts\SlingerObject.cs" />
     <Compile Include="Assets\Scripts\UIMgr.cs" />
+    <Compile Include="Assets\Scripts\UIText.cs" />
     <Compile Include="Assets\Scripts\Weapon.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />

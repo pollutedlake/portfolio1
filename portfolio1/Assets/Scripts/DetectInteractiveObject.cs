@@ -10,7 +10,7 @@ public class DetectInteractiveObject : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -25,6 +25,7 @@ public class DetectInteractiveObject : MonoBehaviour
         {
             Debug.Log(other.gameObject.name);
             originColor = other.GetComponent<SpriteRenderer>().color;
+            //other.GetComponent<Shader>().
             FireFlies fireFly = Instantiate(fireFliesPrefab);
             fireFly.transform.position = this.transform.position;
             fireFly.target = other.gameObject;

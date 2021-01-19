@@ -42,7 +42,7 @@ public class Rhino : Monster
                 break;
             case State.Battle:
                 //Character까지의 방향
-                Vector3 dirToChar = new Vector3(character.transform.position.x - transform.position.x, 0, character.transform.position.z - transform.position.z);
+                Vector3 dirToChar = new Vector3(character.transform.position.x - transform.position.x, 0.0f, character.transform.position.z - transform.position.z);
 
                 // 가만히 있을 때 일정 주기마다 랜덤으로 거리에 따라 패턴이 다르다.
                 if (animator.GetCurrentAnimatorStateInfo(0).IsName("Idle"))

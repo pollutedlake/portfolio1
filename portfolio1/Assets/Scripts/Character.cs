@@ -291,17 +291,21 @@ public class Character : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        // SlingerObject에 닿아있고 F키를 입력하면 slinger를 줍는다.
-        if (other.CompareTag("SlingerObject"))
+        // InteractiveObject에 닿아있고 F키를 입력하면 상호작용을 한다.
+        if (Input.GetKeyDown(KeyCode.F))
         {
-            if (Input.GetKeyDown(KeyCode.F))
+            if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
             {
-                if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
+                animator.SetTrigger("Pick Up");
+                switch (other.tag)
                 {
-                    animator.SetBool("Pick Up", true);
-                    animator.SetBool("Pick Up", false);
-                    slinger = other.GetComponent<SlingerObject>().Interact(leftHand);
-                    slingerN = 20;
+                    case "SlingerObject":
+                        slinger = other.GetComponent<SlingerObject>().Interact(leftHand);
+                        slingerN = 20;
+                        break;
+                    case "InteractiveObject":
+                        Destroy(other.gameObject);
+                        break;
                 }
             }
         }

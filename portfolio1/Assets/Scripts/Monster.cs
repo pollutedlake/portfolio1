@@ -48,10 +48,10 @@ public class Monster : MonoBehaviour
         {
             capsuleCollider = GetComponent<CapsuleCollider>();
         }
-        if (character == null)
+        /*if (character == null)
         {
             character = FindObjectOfType<Character>();
-        }
+        }*/
         if(roarSound == null)
         {
             roarSound = GetComponent<AudioSource>();

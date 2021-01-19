@@ -1379,7 +1379,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 2.87e-43, y: 1.01e-43, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 9.2e-43, y: 1.01e-43, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2492,6 +2492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Rock Type2 03
       objectReference: {fileID: 0}
+    - target: {fileID: 160260, guid: 36cf43d46aeb7494b82aa54d61da3bd7, type: 3}
+      propertyPath: m_TagString
+      value: InteractiveObject
+      objectReference: {fileID: 0}
     - target: {fileID: 476412, guid: 36cf43d46aeb7494b82aa54d61da3bd7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3468,6 +3472,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -8663375430401593899, guid: 2e55f00e6b3259d46ba3810ff56c226d,
         type: 3}
+    - target: {fileID: 1637637501, guid: ff4c76a6e7bf3b040abebd520d19f0bb, type: 3}
+      propertyPath: character
+      value: 
+      objectReference: {fileID: 1405890609}
     - target: {fileID: 1637637502, guid: ff4c76a6e7bf3b040abebd520d19f0bb, type: 3}
       propertyPath: m_UseGravity
       value: 1
@@ -3488,6 +3496,10 @@ PrefabInstance:
       propertyPath: MinDistance
       value: 0.018708229
       objectReference: {fileID: 0}
+    - target: {fileID: 1959460173, guid: ff4c76a6e7bf3b040abebd520d19f0bb, type: 3}
+      propertyPath: monster
+      value: 
+      objectReference: {fileID: 491315080}
     - target: {fileID: 7182447966141221920, guid: ff4c76a6e7bf3b040abebd520d19f0bb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3821,7 +3833,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0404c361633aa5b41a9613fc681297fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTextPrefab: {fileID: 5448275656390904341, guid: c242466a7241c994fa786829da031f48,
+  textPrefab: {fileID: 9088130751717474059, guid: c242466a7241c994fa786829da031f48,
     type: 3}
 --- !u!1 &1660538531
 GameObject:
@@ -4756,7 +4768,7 @@ GameObject:
   - component: {fileID: 2093074832}
   - component: {fileID: 2093074833}
   - component: {fileID: 2093074834}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
