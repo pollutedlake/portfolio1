@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlingerObject : MonoBehaviour
+public class SlingerObject : InteractiveObject
 {
     public Projectile projectilePrefab;
 
@@ -12,7 +12,11 @@ public class SlingerObject : MonoBehaviour
         if (projectilePrefab == null)
         {
             Destroy(this.gameObject);
-        }    
+        }
+        if (meshRenderer == null)
+        {
+            meshRenderer = GetComponent<MeshRenderer>();
+        }
     }
 
     public Projectile Interact(GameObject leftHand)

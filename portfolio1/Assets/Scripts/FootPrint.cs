@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FootPrint : MonoBehaviour
+public class FootPrint : InteractiveObject
 {
     private float durationTime = 0.0f;
 
@@ -10,6 +10,10 @@ public class FootPrint : MonoBehaviour
     void Start()
     {
         durationTime = 0.0f;
+        if (spriteRenderer == null)
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+        }
     }
 
     // Update is called once per frame

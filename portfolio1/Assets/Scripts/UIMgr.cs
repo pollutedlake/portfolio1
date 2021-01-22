@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class UIMgr : MonoBehaviour
 {
     public UIText textPrefab;
+    public Dictionary<InteractiveObject, UIText> objUI = new Dictionary<InteractiveObject, UIText>();
+    public int objectTextIndex = 0;
 
     /// <summary>
     /// 데미지를 보여주는 함수
@@ -24,8 +26,11 @@ public class UIMgr : MonoBehaviour
     public void ShowObjectName(GameObject interactiveObject)
     {
         UIText objectText = Instantiate(textPrefab);
+        objectText.index = objectTextIndex;
+        objectTextIndex++;
         objectText.textType = UIText.Type.objectText;
         objectText.interactiveObject = interactiveObject;
+        objUI.Add(interactiveObject.GetComponent<InteractiveObject>(), objectText);
         objectText.transform.parent = this.transform;
     }
 }

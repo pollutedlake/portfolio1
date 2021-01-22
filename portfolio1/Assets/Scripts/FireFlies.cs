@@ -36,7 +36,7 @@ public class FireFlies : MonoBehaviour
             Vector3 distance = target.transform.position - transform.position;
             if (distance.sqrMagnitude < 0.1f)
             {
-                target.GetComponent<SpriteRenderer>().color = Color.green;
+                target.GetComponent<InteractiveObject>().ChangeColor();
                 uiMgr.ShowObjectName(target);
                 Destroy(gameObject);
             }

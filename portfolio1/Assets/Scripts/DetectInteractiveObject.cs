@@ -5,12 +5,16 @@ using UnityEngine;
 public class DetectInteractiveObject : MonoBehaviour
 {
     public FireFlies fireFliesPrefab;
-    private Color originColor;
+    //private Color originColor;
+    public UIMgr uiMgr;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        if (uiMgr == null)
+        {
+            uiMgr = FindObjectOfType<UIMgr>();
+        }
     }
 
     // Update is called once per frame
@@ -23,9 +27,6 @@ public class DetectInteractiveObject : MonoBehaviour
     {
         if (other.gameObject.CompareTag("InteractiveObject"))
         {
-            Debug.Log(other.gameObject.name);
-            originColor = other.GetComponent<SpriteRenderer>().color;
-            //other.GetComponent<Shader>().
             FireFlies fireFly = Instantiate(fireFliesPrefab);
             fireFly.transform.position = this.transform.position;
             fireFly.target = other.gameObject;
@@ -36,7 +37,9 @@ public class DetectInteractiveObject : MonoBehaviour
     {
         if (other.gameObject.CompareTag("InteractiveObject"))
         {
-            other.GetComponent<SpriteRenderer>().color = originColor;
+            other.GetComponent<InteractiveObject>().ReturnColor();
+            uiMgr.objUI[other.GetComponent<InteractiveObject>()].DestroyObjectText();
+            uiMgr.objUI.Remove(other.GetComponent<InteractiveObject>());
         }
     }
 }

@@ -14,7 +14,7 @@ public class UIText : MonoBehaviour
         damageText, objectText
     }
     public Type textType;
-    private int index = -1;
+    public int index = -1;
 
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class UIText : MonoBehaviour
                 text.text = damage.ToString();
                 break;
             case Type.objectText:
-                text.text = interactiveObject.name;
+                text.text = interactiveObject.name.Substring(0, interactiveObject.name.Contains("(") ? interactiveObject.name.IndexOf('(') : interactiveObject.name.Length);
                 index++;
                 text.color = Color.green;
                 break;
@@ -50,7 +50,7 @@ public class UIText : MonoBehaviour
                 }
                 break;
             case Type.objectText:
-                transform.localPosition = new Vector3(-420, -80, 0) + new Vector3(0, 30 * index, 0);
+                transform.localPosition = new Vector3(-300, -80, 0) + new Vector3(0, 30 * index, 0);
                 if (interactiveObject == null)
                 {
                     DestroyObjectText();
@@ -63,6 +63,6 @@ public class UIText : MonoBehaviour
     public void DestroyObjectText()
     {
         Destroy(gameObject);
-        index--;
+        transform.parent.GetComponent<UIMgr>().objectTextIndex--;
     }
 }
