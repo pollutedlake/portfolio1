@@ -611,6 +611,8 @@ MonoBehaviour:
   - {x: 95.7, y: -3.8, z: 100.5}
   fireFlies: {fileID: 8929008972388935727, guid: 66997ba582aa1344bbf11694693d2652,
     type: 3}
+  uiMgr: {fileID: 0}
+  investigationPoint: 000000000000000000000000
 --- !u!1 &335968006 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011335475624, guid: 128f20fd9fec12b4e9587d7fd19322b7,
@@ -812,7 +814,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1642961027}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -1379,7 +1381,8 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 1.7034e-41, y: 1.04e-43, z: 7.13e-43, w: 0}
+  m_BoundingSphereOverride: {x: -0.0000013404696, y: 2.3413035e-10, z: 7.0062207e+22,
+    w: 7.4992238e+28}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2752,7 +2755,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1642961027}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -3562,7 +3565,7 @@ PrefabInstance:
     - target: {fileID: 7182447966141494576, guid: ff4c76a6e7bf3b040abebd520d19f0bb,
         type: 3}
       propertyPath: m_Name
-      value: Rhino_PBR Variant
+      value: "\uB77C\uC774\uB178"
       objectReference: {fileID: 0}
     - target: {fileID: 7182447966141494576, guid: ff4c76a6e7bf3b040abebd520d19f0bb,
         type: 3}
@@ -3895,9 +3898,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1464365308}
   - {fileID: 604827416}
   - {fileID: 1161213656}
+  - {fileID: 1464365308}
   - {fileID: 1660538532}
   - {fileID: 758933149}
   m_Father: {fileID: 0}
@@ -3923,6 +3926,11 @@ MonoBehaviour:
   textPrefab: {fileID: 9088130751717474059, guid: c242466a7241c994fa786829da031f48,
     type: 3}
   objectTextIndex: 0
+  investigationPointPrefab: {fileID: -178781512087613459, guid: d92621fea0c3be647b2c7f319960d9b9,
+    type: 3}
+  investigationPointIndex: 0
+  width: 0
+  height: 0
 --- !u!1 &1660538531
 GameObject:
   m_ObjectHideFlags: 0
@@ -5725,7 +5733,7 @@ PrefabInstance:
     - target: {fileID: 4792389099543679739, guid: 5bc5b88b1361d2f4ab5803124ce0d139,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4792389099543679739, guid: 5bc5b88b1361d2f4ab5803124ce0d139,
         type: 3}

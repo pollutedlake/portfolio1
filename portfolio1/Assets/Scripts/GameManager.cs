@@ -26,6 +26,8 @@ public class GameManager : MonoBehaviour
     public Vector3[] areaPositions = new Vector3[9];
     public FireFliesManager fireFlies;
     List<Vector3> navigatePath = new List<Vector3>();
+    public UIMgr uiMgr;
+    public int[] investigationPoint = new int[3] { 0, 0, 0 };
 
     private void Awake()
     {
@@ -40,6 +42,10 @@ public class GameManager : MonoBehaviour
     {
         monsters.Add("Rhino", Rhino.gameObject);
         curMonsters = FindObjectsOfType<Monster>();
+        if (uiMgr == null)
+        {
+            uiMgr = FindObjectOfType<UIMgr>();
+        }
     }
 
     // Update is called once per frame

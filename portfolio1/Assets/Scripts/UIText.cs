@@ -15,6 +15,8 @@ public class UIText : MonoBehaviour
     }
     public Type textType;
     public int index = -1;
+    public float screenWidth;
+    public float screenHeight;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +52,7 @@ public class UIText : MonoBehaviour
                 }
                 break;
             case Type.objectText:
-                transform.localPosition = new Vector3(-300, -80, 0) + new Vector3(0, 30 * index, 0);
+                transform.localPosition = new Vector3(-screenWidth * 2 / 5, -80, 0) + new Vector3(0, screenHeight / 10 * index, 0);
                 if (interactiveObject == null)
                 {
                     DestroyObjectText();

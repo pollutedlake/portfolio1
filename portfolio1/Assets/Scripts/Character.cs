@@ -292,20 +292,24 @@ public class Character : MonoBehaviour
     private void OnTriggerStay(Collider other)
     {
         // InteractiveObject에 닿아있고 F키를 입력하면 상호작용을 한다.
-        if (Input.GetKeyDown(KeyCode.F))
+        if (other.CompareTag("InteractiveObject"))
         {
-            if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
+            if (Input.GetKeyDown(KeyCode.F))
             {
-                animator.SetTrigger("Pick Up");
-                switch (other.tag)
+                if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
                 {
-                    case "SlingerObject":
-                        slinger = other.GetComponent<SlingerObject>().Interact(leftHand);
+                    animator.SetTrigger("Pick Up");
+                    if(other.TryGetComponent<SlingerObject>(out SlingerObject slingerObject))
+                    {
+                        slinger = slingerObject.Interact(leftHand);
                         slingerN = 20;
-                        break;
-                    case "InteractiveObject":
+                    }
+                    else if(other.TryGetComponent<FootPrint>(out FootPrint footPrint))
+                    {
+                        GameManager.instance.investigationPoint[0] += 20;
+                        GameManager.instance.uiMgr.ShowInvestigatePoint(footPrint.monster.name, "발자국", 20);
                         Destroy(other.gameObject);
-                        break;
+                    }
                 }
             }
         }
