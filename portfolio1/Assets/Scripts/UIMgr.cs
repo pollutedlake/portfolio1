@@ -5,12 +5,17 @@ using UnityEngine.UI;
 
 public class UIMgr : MonoBehaviour
 {
+
+    // 상호작용한 Object(InteractiveObject) 알림 UI
     public UIText textPrefab;
-    public Dictionary<InteractiveObject, UIText> objUI = new Dictionary<InteractiveObject, UIText>();
+    public Dictionary<InteractiveObject, UIText> objUI = new Dictionary<InteractiveObject, UIText>();       // InteractiveObject와 UIText를 연동하기 위한 Dictionary
     public int objectTextIndex = 0;
+
+    // 조사포인트 UI
     public InvestigationPoint investigationPointPrefab;
-    public List<InvestigationPoint> investigationPoints = new List<InvestigationPoint>();
     public int investigationPointIndex = 0;
+
+    // 화면 크기
     public float width;
     public float height;
 
@@ -34,8 +39,14 @@ public class UIMgr : MonoBehaviour
         damageText.transform.parent = this.transform;
     }
 
-    public void ShowObjectName(GameObject interactiveObject)
+
+    /// <summary>
+    /// InteractiveObject의 이름을 생성하는 함수
+    /// </summary>
+    /// <param name="interactiveObject"> 보여줄 InteractiveObject </param>
+    public void ShowObjectName(InteractiveObject interactiveObject)
     {
+        // text 생성, 초기화
         UIText objectText = Instantiate(textPrefab);
         objectText.index = objectTextIndex;
         objectTextIndex++;
@@ -46,8 +57,16 @@ public class UIMgr : MonoBehaviour
         objUI.Add(interactiveObject.GetComponent<InteractiveObject>(), objectText);
         objectText.transform.parent = this.transform;
     }
+
+    /// <summary>
+    /// 조사포인트 UI를 생성하는 함수
+    /// </summary>
+    /// <param name="monsterName"> 몬스터이름 </param>
+    /// <param name="what"> 조사포인트를 획득하는 매개체 </param>
+    /// <param name="point"> 포인트양 </param>
     public void ShowInvestigatePoint(string monsterName, string what, int point)
     {
+        // 조사포인트 UI 생성 초기화
         InvestigationPoint investigationPoint = Instantiate(investigationPointPrefab);
         investigationPoint.index = investigationPointIndex;
         investigationPointIndex++;

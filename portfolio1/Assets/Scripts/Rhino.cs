@@ -15,7 +15,9 @@ public class Rhino : Monster
     private float attackPattern;        
     private Vector3 runDir;     
 
-    private Ray areaCheckRay;
+    private Ray areaCheckRay;       // 현재 몬스터가 어디에 있는지 확인하는 Ray
+
+    // 발자국
     public FootPrint footPrintPrefab;
     private float footPrintT = 0.0f;
 
@@ -139,6 +141,8 @@ public class Rhino : Monster
                 capsuleCollider.center = new Vector3(-0.7f, 0, capsuleCollider.center.z);
                 break;
         }
+
+        // 현재 몬스터가 위치한 area를 체크해서 GameManager에 넘겨줌
         areaCheckRay = new Ray(transform.position, new Vector3(0.0f, -2.0f, 0.0f));
         RaycastHit hitInfo;
         bool isArea = Physics.Raycast(areaCheckRay, out hitInfo, 2.0f, 1 << 9);
@@ -182,12 +186,13 @@ public class Rhino : Monster
         {
             TakeDamage(10.0f);
             uiMgr.ShowDamage(other.ClosestPoint(capsuleCollider.center), 10.0f);
-            objectManager.ShowHitEffect(other.ClosestPoint(capsuleCollider.center), "Hit");
+            objectManager.ShowEffect(other.ClosestPoint(capsuleCollider.center), "Hit");
             if (monState == monStates["Patrol"])
             {
                 Shout();
             }
         }
+
         // Slinger이라면 Slinger Destroy한다.
         if (other.gameObject.CompareTag("Slinger"))
         {

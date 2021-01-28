@@ -116,6 +116,7 @@ public class Monster : MonoBehaviour
             else
             {
                 transform.position += direction.normalized * Time.deltaTime * patrolSpeed;
+                // 일정 시간마다 발자국 생성
                 footPrintT += Time.deltaTime;
                 if(footPrintT > 10.0f)
                 {
@@ -151,6 +152,7 @@ public class Monster : MonoBehaviour
         }
     }
 
+    // 몬스터가 죽었을 때 호출하는 함수
     public void Die()
     {
         curHp = 0;

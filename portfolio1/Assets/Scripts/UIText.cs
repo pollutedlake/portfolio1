@@ -5,16 +5,28 @@ using UnityEngine.UI;
 
 public class UIText : MonoBehaviour
 {
-    private float destroyT;     // DamageText가 사라지는데 걸리는 시간
+    // damageText
+    private float destroyT;
     public float damage;
+
     public Text text;
-    public GameObject interactiveObject;
+
+    // objectText
+    public InteractiveObject interactiveObject;
+
+    /// <summary>
+    /// text Type
+    /// damageText : 데미지를 띄워주는 text UI 타입
+    /// objectText : 상호작용가능한 오브젝트가 근처에 있을 때 알려주는 text UI 타입
+    /// </summary>
     public enum Type
     {
         damageText, objectText
     }
     public Type textType;
     public int index = -1;
+
+    // 화면 크기
     public float screenWidth;
     public float screenHeight;
 
@@ -53,18 +65,24 @@ public class UIText : MonoBehaviour
                 break;
             case Type.objectText:
                 transform.localPosition = new Vector3(-screenWidth * 2 / 5, -80, 0) + new Vector3(0, screenHeight / 10 * index, 0);
+                // InteractiveObject가 사라지면 Destroy
                 if (interactiveObject == null)
                 {
-                    DestroyObjectText();
+                    DestroyObjectText(interactiveObject);
                 }
                 break;
         } 
     
     }
 
-    public void DestroyObjectText()
+    /// <summary>
+    /// objectText제거시 호출
+    /// </summary>
+    /// <param name="key"> 제거할 objectText와 연동된 interactiveObject </param>
+    public void DestroyObjectText(InteractiveObject key)
     {
         Destroy(gameObject);
+        transform.parent.GetComponent<UIMgr>().objUI.Remove(key);
         transform.parent.GetComponent<UIMgr>().objectTextIndex--;
     }
 }

@@ -37,7 +37,7 @@ public class Character : MonoBehaviour
     private bool fallDownEnd = false;
     public bool canHit = true;
 
-    private Ray areaCheckRay;
+    private Ray areaCheckRay;       // 현재 캐릭터가 어느 지역에 있는지 확인하는 Ray
 
     // Start is called before the first frame update
     void Start()
@@ -203,6 +203,7 @@ public class Character : MonoBehaviour
             }
         }
 
+        // 현재 캐릭터가 위치한 area를 확인해서 GameManager에게 넘겨준다.
         areaCheckRay = new Ray(transform.position, transform.position - new Vector3(0.0f, 2.0f, 0.0f));
         RaycastHit hitInfo;
         bool isArea = Physics.Raycast(areaCheckRay, out hitInfo, 2.0f, 1 << 9);
@@ -291,7 +292,7 @@ public class Character : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        // InteractiveObject에 닿아있고 F키를 입력하면 상호작용을 한다.
+        // InteractiveObject에 닿아있고 움직이는 상황에서 F키를 입력하면 상호작용을 한다.
         if (other.CompareTag("InteractiveObject"))
         {
             if (Input.GetKeyDown(KeyCode.F))
@@ -299,11 +300,13 @@ public class Character : MonoBehaviour
                 if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Move"))
                 {
                     animator.SetTrigger("Pick Up");
+                    // 슬링어오브젝트인 경우 왼쪽손에 장착한다.
                     if(other.TryGetComponent<SlingerObject>(out SlingerObject slingerObject))
                     {
                         slinger = slingerObject.Interact(leftHand);
                         slingerN = 20;
                     }
+                    // 발자국인 경우 조사포인트를 획득하고 조사포인트 UI를 생성하고 발자국을 없앤다.
                     else if(other.TryGetComponent<FootPrint>(out FootPrint footPrint))
                     {
                         GameManager.instance.investigationPoint[0] += 20;

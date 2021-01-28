@@ -6,21 +6,12 @@ public class InteractiveObject : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public MeshRenderer meshRenderer;
-    private Color originColor;
-    private Shader originShader;
 
-    // Start is called before the first frame update
-    void Start()
-    {
+    private Color originColor;      // 원래 색
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    /// <summary>
+    /// Object의 원래 색을 저장하고 초록색으로 바꿔주는 함수
+    /// </summary>
     public void ChangeColor()
     {
         if (spriteRenderer == null)
@@ -35,6 +26,9 @@ public class InteractiveObject : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// Object의 색을 다시 원래 색으로 복원시키는 함수
+    /// </summary>
     public void ReturnColor()
     {
         if (spriteRenderer == null)
