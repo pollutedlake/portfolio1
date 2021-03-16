@@ -8,6 +8,9 @@ public class FireFlies : MonoBehaviour
     public Vector3 characterPosition;
     public GameObject target;       // FireFly가 쫓는 대상
     public UIMgr uiMgr;
+    public Navigator navigator;
+
+    //public int index;
 
     // target이 InteractiveObject일 경우 포물선으로 날아가는데 필요한 변수들
     public float firingAngle = 45.0f;
@@ -27,6 +30,10 @@ public class FireFlies : MonoBehaviour
         {
             uiMgr = FindObjectOfType<UIMgr>();
         }
+        if (!target.CompareTag("InteractiveObject"))
+        {
+            navigator = FindObjectOfType<Navigator>();
+        }
     }
 
     private void Update()
@@ -44,14 +51,16 @@ public class FireFlies : MonoBehaviour
             }
             
         }
-        else
-        {
-            characterPosition = new Vector3(character.transform.position.x, transform.position.y, character.transform.position.z);
-            if ((characterPosition - transform.position).sqrMagnitude < 0.1f || (characterPosition - transform.position).sqrMagnitude > 25.0f)
-            {
-                this.gameObject.SetActive(false);
-            }
-        }
+        //else
+        //{
+        //    characterPosition = new Vector3(character.transform.position.x, transform.position.y, character.transform.position.z);
+        //    if ((characterPosition - transform.position).sqrMagnitude < 0.5f || (characterPosition - transform.position).sqrMagnitude > 1000.0f)
+        //    {
+        //        this.gameObject.SetActive(false);
+        //        navigator.activeCount--;
+        //        //navigator.fireFliesList.RemoveAt(index);
+        //    }
+        //}
     }
 
 

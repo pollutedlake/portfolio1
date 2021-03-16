@@ -63,8 +63,41 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TheTalesFactory\Photoscanned MoutainsRocks PBR\_ReadMe &amp; Publisher Window\Inspector Info\Scripts\Editor\PublisherReadmeEditor.cs" />
-    <Compile Include="Assets\TheTalesFactory\Photoscanned MoutainsRocks PBR\_ReadMe &amp; Publisher Window\Welcome Screen\Scripts\Editor\PublisherWelcomeScreen.cs" />
+    <Compile Include="Assets\DreamForestTree\Editor\SettingsPrompt.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Attributes\PostProcessingModelEditorAttribute.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\AmbientOcclusionModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\AntialiasingModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\BloomModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\BuiltinDebugViewsEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\ChromaticAberrationEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\ColorGradingModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\DefaultPostFxModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\DepthOfFieldModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\DitheringModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\EyeAdaptationModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\FogModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\GrainModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\MotionBlurModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\ScreenSpaceReflectionModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\UserLutModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Models\VignetteModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Monitors\HistogramMonitor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Monitors\ParadeMonitor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Monitors\VectorscopeMonitor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Monitors\WaveformMonitor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PostProcessingBehaviourEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PostProcessingFactory.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PostProcessingInspector.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PostProcessingModelEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PostProcessingMonitor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PropertyDrawers\GetSetDrawer.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PropertyDrawers\MinDrawer.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\PropertyDrawers\TrackballGroupDrawer.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Utils\CurveEditor.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Utils\EditorGUIHelper.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Utils\EditorResources.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Utils\FxStyles.cs" />
+    <Compile Include="Assets\DreamForestTree\PostProcessing\Editor\Utils\ReflectionUtils.cs" />
     <Reference Include="UnityEditor.TestRunner">
       <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
@@ -89,20 +122,23 @@
     <Reference Include="Unity.CollabProxy.Editor">
       <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Postprocessing.Editor">
+      <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.Rider.Editor">
       <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.2D.Sprite.Editor">
+      <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Postprocessing.Runtime">
+      <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
       <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Editor">
-      <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Postprocessing.Runtime">
-      <HintPath>C:/Users/psh95/OneDrive/바탕 화면/상현/공부/Game Programing/portfolio1/portfolio1/portfolio1/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.3f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

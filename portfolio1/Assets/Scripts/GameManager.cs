@@ -1,25 +1,27 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using System.Linq;
 
 public class GameManager : MonoBehaviour
 {
+    public Navigator navigator;
     public static GameManager instance;
     public Character character;
     public Monster Rhino;
     public Dictionary<string, GameObject> monsters = new Dictionary<string, GameObject>();
     public Monster[] curMonsters = new Monster[3];
     public int nodeNumber = 9;
-    //public float[,] mapGraph = new float[9, 9] { { 99.0f, 1.0f, 99.0f, 99.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
-    //                                         { 1.0f, 99.0f, 1.0f, 99.0f, 1.0f,99.0f, 99.0f, 99.0f, 99.0f}, 
-    //                                         { 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f}, 
-    //                                         { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f}, 
-    //                                         { Mathf.Sqrt(2.0f), 1.0f, 99.0f, 1.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 1.0f, 99.0f}, 
-    //                                         { 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 99.0f},
-    //                                         { 99.0f, 99.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
-    //                                         { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f},
-    //                                         { 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f} };
+    public float[,] mapGraph = new float[9, 9] { { 99.0f, 1.0f, 99.0f, 99.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
+                                             { 1.0f, 99.0f, 1.0f, 99.0f, 1.0f,99.0f, 99.0f, 99.0f, 99.0f},
+                                             { 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f},
+                                             { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f},
+                                             { Mathf.Sqrt(2.0f), 1.0f, 99.0f, 1.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 1.0f, 99.0f},
+                                             { 99.0f, 99.0f, 1.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 99.0f},
+                                             { 99.0f, 99.0f, 99.0f, 1.0f, Mathf.Sqrt(2.0f), 99.0f, 99.0f, 99.0f, 99.0f},
+                                             { 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f, 99.0f, 99.0f, 1.0f},
+                                             { 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 99.0f, 1.0f, 99.0f} };
     public bool[] isCheck = new bool[9] { false, false, false, false, false, false, false, false, false };
     public int curCharacterArea;
     public int[] curMonsterArea = new int[3] { -1, -1, -1 };
@@ -53,6 +55,14 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
+            Debug.Log(Rhino);
+            navigator.target = Rhino;
+            navigator.curCharacterArea = curCharacterArea;
+            navigator.curMonsterArea = curMonsterArea[0];
+            Debug.Log(curCharacterArea);
+            Debug.Log(curMonsterArea[0]);
+            //navigator.GetComponent<NavMeshAgent>().SetDestination(Rhino.transform.position + new Vector3(0.0f, 1.0f, 0.0f));
+            //character.GetComponent<NavMeshAgent>().SetDestination(Rhino.transform.position);
             //List<int> shortestPath = new List<int>(FindShortestPath(curCharacterArea, curMonsterArea[0]));
             //for (int i = 0; i < shortestPath.Count; i++) {
             //    navigatePath.Add(areaPositions[shortestPath[i]]);
@@ -62,8 +72,8 @@ public class GameManager : MonoBehaviour
             //{
             //    Debug.Log(navigatePath[i]);
             //}
-            FireFliesManager fireFliesManager = Instantiate(fireFlies);
-            fireFliesManager.transform.position = character.transform.position + new Vector3(0.0f, 2.0f, 0.0f);
+            //FireFliesManager fireFliesManager = Instantiate(fireFlies);
+            //fireFliesManager.transform.position = character.transform.position + new Vector3(0.0f, 2.0f, 0.0f);
             //fireFliesManager.navigatePath = navigatePath;
             //fireFliesManager.isNavigate = true;
         }
