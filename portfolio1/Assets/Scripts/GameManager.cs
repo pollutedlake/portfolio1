@@ -56,6 +56,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log(Rhino);
+            navigator.transform.position = character.transform.position;
             navigator.target = Rhino;
             navigator.curCharacterArea = curCharacterArea;
             navigator.curMonsterArea = curMonsterArea[0];
