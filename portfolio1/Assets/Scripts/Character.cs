@@ -309,9 +309,16 @@ public class Character : MonoBehaviour
                     // 발자국인 경우 조사포인트를 획득하고 조사포인트 UI를 생성하고 발자국을 없앤다.
                     else if(other.TryGetComponent<FootPrint>(out FootPrint footPrint))
                     {
-                        GameManager.instance.investigationPoint[0] += 20;
-                        GameManager.instance.uiMgr.ShowInvestigatePoint(footPrint.monster.name, "발자국", 20);
-                        Destroy(other.gameObject);
+                        for (int i = 0; i < 3; i++)
+                        {
+                            if (footPrint.monster.name == GameManager.instance.curMonsters[i].name)
+                            {
+                                GameManager.instance.investigationPoint[i] += 20;
+                                GameManager.instance.uiMgr.ShowInvestigatePoint(footPrint.monster.name, "발자국", 20);
+                                Destroy(other.gameObject);
+                                break;
+                            }
+                        }
                     }
                 }
             }
