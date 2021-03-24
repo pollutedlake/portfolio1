@@ -71,7 +71,6 @@
     <Compile Include="Assets\Scripts\Effects.cs" />
     <Compile Include="Assets\Scripts\EyeSight.cs" />
     <Compile Include="Assets\Scripts\FireFlies.cs" />
-    <Compile Include="Assets\Scripts\FireFliesManager.cs" />
     <Compile Include="Assets\Scripts\FollowingCamera.cs" />
     <Compile Include="Assets\Scripts\FootPrint.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
@@ -93,7 +92,7 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\Rhino\Sheder\StandardDoubleSided.shader" />
+    <None Include="Assets\Resources\Rhino\Sheder\StandardDoubleSided.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />

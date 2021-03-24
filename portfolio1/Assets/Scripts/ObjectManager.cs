@@ -43,24 +43,6 @@ public class ObjectManager : MonoBehaviour
         
     }
 
-    //public void ObjectPooling(Vector3 position, List<GameObject> objectPool)
-    //{
-    //    while (objectPool[curIdx].active)
-    //    {
-    //        curIdx++;
-    //        if(curIdx > objectPool.Count)
-    //        {
-    //            curIdx = 0;
-    //        }
-    //    }
-    //    objectPool[curIdx] = gameObject;
-    //    objectPool[curIdx].transform.position = position;
-    //    //objectPool[curIdx].transform.position = position;
-    //    //Instantiate(gameObject, objectPool[curIdx].transform);
-    //    //gameObject.transform.localPosition = new Vector3(0, 0, 0);
-    //    objectPool[curIdx].SetActive(true);
-    //}
-
     /// <summary>
     /// 맞는 효과를 보여주는 함수
     /// </summary>

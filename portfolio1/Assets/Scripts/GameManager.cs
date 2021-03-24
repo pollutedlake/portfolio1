@@ -39,6 +39,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // 조사 포인트가 60점 이상이면 반딧불이 몬스터에게 안내한다.
         for(int i = 0; i < 3; i++)
         {
             if (investigationPoint[i] >= 60)

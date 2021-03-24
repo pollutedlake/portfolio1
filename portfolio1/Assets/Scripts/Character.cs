@@ -11,7 +11,7 @@ public class Character : MonoBehaviour
     private Rigidbody rigidbody;
     public CapsuleCollider capsuleCollider;
 
-    // 슬리어와 관련된 변수
+    // 슬링어와 관련된 변수
     private Projectile slinger;
     private int slingerN;
     public GameObject leftHand;

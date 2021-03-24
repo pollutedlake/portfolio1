@@ -51,16 +51,6 @@ public class FireFlies : MonoBehaviour
             }
             
         }
-        //else
-        //{
-        //    characterPosition = new Vector3(character.transform.position.x, transform.position.y, character.transform.position.z);
-        //    if ((characterPosition - transform.position).sqrMagnitude < 0.5f || (characterPosition - transform.position).sqrMagnitude > 1000.0f)
-        //    {
-        //        this.gameObject.SetActive(false);
-        //        navigator.activeCount--;
-        //        //navigator.fireFliesList.RemoveAt(index);
-        //    }
-        //}
     }
 
 

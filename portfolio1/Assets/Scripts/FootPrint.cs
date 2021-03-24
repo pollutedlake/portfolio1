@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class FootPrint : InteractiveObject
 {
-    private float durationTime = 0.0f;
+    private float durationTime = 0.0f;      // 유지시간
     public Monster monster;     // 발자국의 주인
 
     // Start is called before the first frame update
